@@ -25,7 +25,7 @@ const Executives = () => {
     );
 
   return (
-    <div className=" executive md:px-[3rem] py-6 px-6 lg:px-[4rem] bg-grey">
+    <div className=" executive md:px-[3rem] py-6 px-6 lg:px-[2rem] bg-grey">
       <h1 className="text-[#A71E1E] text-center text-[2rem] font-bold leading-[150%] ">
         Meet Our Executives
       </h1>
