@@ -5,6 +5,7 @@ import bowenLogo from "../../public/icons/BOWEN LOGO 1.svg";
 // import footerLogo from "../../src/public/images/Home-Page/footer-logo.png"
 // import footerLogo from "../../../src/public/images/Home-Page/footer-logo.png";
 import { FaXTwitter, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const aboutUs = {
@@ -50,7 +51,7 @@ const Footer = () => {
       <div className="w-full flex flex-col sm:flex-row flex-wrap gap-8 justify-between items-center sm:items-start sm:gap-16">
         {/* Footer Logo */}
         <div className="w-max h-fit min-w-[90px] flex flex-col justify-center items-center p-3 sm:p-5 bg-white rounded-2xl cursor-pointer">
-          <a href="/">
+          <Link href="/">
             <div className="flex justify-center items-center">
               <img src={nacoslogo} alt="" />
               <img src={bowenLogo} alt="" />
@@ -58,7 +59,7 @@ const Footer = () => {
             <h1 className="text-[20px] md:text-[25px] font-black text-[#A71E1E] uppercase whitespace-nowrap">
               Nacos Bowen
             </h1>
-          </a>
+          </Link>
         </div>
         {/* <img src={footerLogo} className="w-[7rem] sm:w-[12rem] md:w-[15rem]" /> */}
 

@@ -94,9 +94,9 @@ const Navbar = () => {
     <div>
       <div className="flex px-2 py-2 lg:px-[4rem] lg:py-4 flex-row justify-between items-center relative  shadow-lg shadow-black-500/50 ">
         <div>
-          <a href="/">
+          <Link href="/">
             <img src={logo} alt="logo" />
-          </a>
+          </Link>
         </div>
 
         <div className="lg:block hidden">
@@ -128,15 +128,15 @@ const Navbar = () => {
 
                 {showAbout && (
                   <div className="flex justify-start items-start bg-[white] gap-[0.9rem] flex-col w-[200%] rounded-[0.5rem] pr-0  px-4 py-4 absolute shadow-xl top-[100%] ">
-                    <a href="/About" className="text-navDrop ">
+                    <Link href="/about" className="text-navDrop ">
                       NACOS Bowen
-                    </a>
-                    <a href="executives" className="text-navDrop ">
+                    </Link>
+                    <Link href="executives" className="text-navDrop ">
                       Our Executives
-                    </a>
-                    <a href="/level-advisers" className="text-navDrop ">
+                    </Link>
+                    <Link href="/level-advisers" className="text-navDrop ">
                       Level Advisers & PCs
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
@@ -154,23 +154,23 @@ const Navbar = () => {
                 </div>
                 {showMore && (
                   <div className="flex justify-start items-start bg-[white] gap-[0.9rem] flex-col w-[250%] rounded-[0.5rem] pr-0  px-4 py-4 absolute shadow-xl top-[100%] right-[-4rem]">
-                    <a href="/Blogs" className="text-navDrop ">
+                    <Link href="/Blogs" className="text-navDrop ">
                       Blogs
-                    </a>
-                    <a href="/PastQuestions" className="text-navDrop ">
+                    </Link>
+                    <Link href="/PastQuestions" className="text-navDrop ">
                       Past Questions
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
             </li>
             {/* <li>
-              <a
+              <Link
                 className="font-Poppins text-base font-medium text-navdark"
                 href="/Events"
               >
                 Events
-              </a>
+              </Link>
             </li> */}
           </ul>
         </div>
@@ -185,9 +185,9 @@ const Navbar = () => {
         {showMobile ? (
           <div className="px-2 py-2 lg:px-[4rem] lg:py-4 h-[100vh] fixed top-0 left-0 w-full lg:hidden block items-center bg-[white] z-40">
             <div className="w-fit">
-              <a href="/">
+              <Link href="/">
                 <img src={logo} alt="logo" />
-              </a>
+              </Link>
             </div>
 
             <div className="w-full flex flex-col sm:w-[100%] gap-[3rem] absolute top-[60px]">
@@ -196,9 +196,9 @@ const Navbar = () => {
                 {
                   navLinks.map((linkItem) => (
                     <li key={linkItem.name}>
-                      <a href={linkItem.link} className="text-black text-lg">
+                      <Link href={linkItem.link} className="text-black text-lg">
                         {linkItem.name}
-                      </a>
+                      </Link>
                     </li>
                   ))
                 }
