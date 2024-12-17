@@ -47,15 +47,14 @@ const Executives = () => {
           </div>
         ))}
       </div>
-      <Link
-        to="/executives"
-        className="flex sm:justify-end justify-center items-center sm:items-end mb-6"
-      >
-        <button className="flex flex-row items-center gap-2 rounded-sm bg-white px-4 py-2 border border-white border-solid mt-12">
-          <p className="flex items-center gap-1">See all executives</p>{" "}
-          <img src={arrow} alt="arrow" />
-        </button>
-      </Link>
+      <div className="flex sm:justify-end justify-center items-center mt-6 sm:items-end mb-6">
+        <Link to="/executives">
+          <button className="flex flex-row items-center gap-2 rounded-sm px-4 py-2">
+            <p className="flex items-center gap-1">See all executives</p>
+            <img src={arrow} alt="arrow" />
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

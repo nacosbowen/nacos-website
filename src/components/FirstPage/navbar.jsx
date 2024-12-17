@@ -92,7 +92,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="flex px-2 py-2 lg:px-[4rem] lg:py-4 flex-row justify-between items-center relative  shadow-lg shadow-black-500/50 ">
+      <div className="flex px-2 py-2 lg:px-[4rem] lg:py-4 flex-row justify-between items-center relative shadow-lg shadow-black-500/50 ">
         <div>
           <Link to={"/"}>
             <img src={logo} alt="logo" />
@@ -100,14 +100,14 @@ const Navbar = () => {
         </div>
 
         <div className="lg:block hidden">
-          <ul className="flex gap-2 lg:gap-12">
+          <ul className="flex gap-2 lg:gap-12 z-10">
             <li>
-              <a
+              <Link
                 className="font-Poppins text-base font-medium text-navdark"
                 to={"/"}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
               <div
