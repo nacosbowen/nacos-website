@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { NacosContext } from "./contexts/nacosContext";
 
@@ -18,7 +18,7 @@ function App() {
   return (
     <Suspense fallback={<Loader />}>
       <NacosContext>
-        <div>
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -30,7 +30,7 @@ function App() {
             <Route path="/blogDesc/:id" element={<BlogDesc/>} />
             <Route path="*" element={<p>Page not found</p>} />
           </Routes>
-        </div>
+        </BrowserRouter>
       </NacosContext>
     </Suspense>
   );
