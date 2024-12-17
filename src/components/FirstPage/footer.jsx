@@ -12,7 +12,7 @@ const Footer = () => {
     title: "About Us",
     items: [
       { name: "Home", href: "/" },
-      { name: "Bowen Nacos", href: "./about" },
+      { name: "Bowen Nacos", href: "/about" },
       { name: "Executives", href: "/executives" },
       { name: "Level Advisers", href: "/level-advisers" },
     ],
