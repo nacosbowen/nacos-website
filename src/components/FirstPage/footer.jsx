@@ -51,7 +51,7 @@ const Footer = () => {
       <div className="w-full flex flex-col sm:flex-row flex-wrap gap-8 justify-between items-center sm:items-start sm:gap-16">
         {/* Footer Logo */}
         <div className="w-max h-fit min-w-[90px] flex flex-col justify-center items-center p-3 sm:p-5 bg-white rounded-2xl cursor-pointer">
-          <Link href="/">
+          <Link to={"/"}>
             <div className="flex justify-center items-center">
               <img src={nacoslogo} alt="" />
               <img src={bowenLogo} alt="" />
@@ -61,7 +61,6 @@ const Footer = () => {
             </h1>
           </Link>
         </div>
-        {/* <img src={footerLogo} className="w-[7rem] sm:w-[12rem] md:w-[15rem]" /> */}
 
         {/* Footer navlinks */}
         <div className="w-[100%] sm:w-[50%] text-left flex flex-wrap justify-between">
@@ -74,9 +73,9 @@ const Footer = () => {
                 key={index}
                 className="text-[1rem] text-[#ddd] hover:text-white font-normal cursor-pointer hover:underline"
               >
-                <a href={item.href} className="">
+                <Link to={item.href} className="">
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -90,7 +89,7 @@ const Footer = () => {
                 key={index}
                 className="text-[1rem] text-[#ddd] hover:text-white font-normal cursor-pointer  hover:underline"
               >
-                <a href={item.href}>{item.name}</a>
+                <Link to={item.href}>{item.name}</Link>
               </li>
             ))}
           </ul>
@@ -104,7 +103,7 @@ const Footer = () => {
           className="text-[#ddd] font-normal text-[.98rem] mb-3"
           href="mailto:Nacosbowenuni@gmail.com"
         >
-          nacosbowenuni@gmail.com
+          nacosbowen@gmail.com
         </a>
 
         {/* Social links */}
