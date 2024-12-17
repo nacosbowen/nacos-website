@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> */
+@layer base {
+  :root {
+    --color-primary: rgb(255 115 179);
+    --color-secondary: rgb(111 114 185);
+    --text-dark-nav: #1e1e1e;
+    --text-dark: #000;
+    --darkorange: #a71e1e;
+    --darkblue: #0a256c;
+    --newsletterbackground: #efebeb;
+    --border: #d4cdcd;
+    --white: #fff;
+    --darkColor: #000;
+    --navDrop: #4e4e4e;
+    --welcome: #f8cdcd;
+    --grey: rgba(217, 217, 217, 0.19);
+    --grey2: rgba(124, 124, 124, 0.64);
+    --grey3: #f1f5f6;
+    /* ... */
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slider 120s linear infinite;
+}
+
+@keyframes slider {
+  0%, 20% { background-image: url('./public/images/Rectangle 2.jpg'); }
+  25%, 45% { background-image: url('./public/images/Home-Page/Home-8.jpg'); }
+  50%, 70% { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./public/images/Home-Page/Home-10.jpg'); } /*Linear gradient to darken image*/
+  75%, 100% { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./public/images/Home-Page/Home-7.jpg'); }/*Linear gradient to darken image*/
+}
+
+.Abouthero {
+  background-image: url(../src/public/images/about-us-page/about-4.webp);
+  /* background-size: cover; */
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+}
+.nacostext {
+  background-color: rgba(250, 181, 181, 0.24);
+}
+/* .executive {
+  background-color: rgba(116, 3, 3, 0.93);
+} */
+
+.events {
+  background-image: url(../src/public/images/eventPictures/event-3.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blog {
+  background-image: url(../src/public/images/blogImage/blogImg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #c4c4c4;
+}
+
+.exam {
+  background-image: url('../src/public/images/PQ_background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.currentEvents {
+  width: 30rem;
+  height: 30rem;
+}
+
+.cta::placeholder {
+  color: green;
+}
+.head {
+  font-family: "Inter";
+}
+/* .triangle {
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  background-color: #a71e1e;
+} */
+.triangle {
+  position: absolute;
+  top: -8px; /* Position the triangle above the box */
+  left: 20px; /* Adjust to align with the box */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--darkorange); /* Match background color */
+}
+.triangleMission{
+  position: absolute;
+  top: -8px; /* Position the triangle above the box */
+  left: 80vw; /* Adjust to align with the box */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--darkorange);
+}
+/* background-color: black;
+
+/* .show {
+  /* display: none; */
+
+.open:hover .show {
+  display: block;
+  display: flex;
+}
+/* .triangle {
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 5%;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid var(--darkorange);
+} */
+.vision-box {
+  /* display: none; */
+  position: absolute;
+  /* top: 100%; */
+  left: 0;
+  width: 80%; /* Ensure the box takes up full width */
+  transform: scaleX(0); /* Initially, scale the box to 0 */
+  /* transform-origin: none;  */
+  opacity: 0; /* Initially hide the box */
+  height: auto;
+  max-height: 500px; /* Set a max-height to avoid unwanted overflow */
+  overflow: none;
+  margin-left: 50px; /* Allow scrolling inside the box if content overflows */
+  background-color: var(--darkorange); /* Match background color */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Animate scale and opacity */
+  z-index: 10; 
+}
+
+.vision:hover > .vision-box {
+  transform: scaleX(1); /* Scale the box back to full width */
+  opacity: 1;
+  /* top: 0%; */
+}
+.vision-card:hover .firstVisionArray {
+  display: none;
+}
+.vision-card:hover .secondVisionArray {
+  display: block;
+}
+.secondVisionArray {
+  display: none;
+}
+
+.mission-box {
+  /* display: none; */
+  position: absolute;
+  /* top: 100%; */
+  left: 0;
+  width: 80%; /* Ensure the box takes up full width */
+  transform: scaleX(0); /* Initially, scale the box to 0 */
+  /* transform-origin: left;  */
+  opacity: 0; /* Initially hide the box */
+  height: auto;
+  max-height: 500px; /* Set a max-height to avoid unwanted overflow */
+  overflow: none; /* Allow scrolling inside the box if content overflows */
+  margin: 50px; /* Allow scrolling inside the box if content overflows */
+
+  background-color: var(--darkorange); /* Match background color */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Animate scale and opacity */
+  /* z-index: 10;  */
+}
+
+.mission:hover > .mission-box {
+  transform: scaleX(1); /* Scale the box back to full width */
+  opacity: 1;
+}
+.mission-card:hover .firstMissionArray {
+  display: none;
+}
+.mission-card:hover .secondMissionArray {
+  display: block;
+}
+.secondMissionArray {
+  display: none;
+}
+.vision-card:hover {
+  background-color: #a71e1e;
+  color: #fff;
+}
+
+.mission-card:hover {
+  background-color: #a71e1e;
+  color: #fff;
+}
+
+.the-vision {
+  display: none; /* Initially hide the vision section */
+  /* Additional styles for hidden content can be added here */
+}
+
+
+
+.the-mission {
+  display: none; /* Initially hide the mission section */
+}
+
+.mission-open:hover > .the-mission {
+  display: block; /* Display the mission section when .mission-open is hovered */
+  transition: all 0.2s ease; /* Add a smooth transition effect */
+}
+
+.the-vision {
+  display: none;
+  /* Additional styles for hidden content can be added here */
+}
+
+.vision-open:hover .the-vision {
+  display: block;
+  transition: all 0.2s ease;
+}
+@keyframes scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+.slider{
+  animation: scroll 5s infinite linear;
+}
