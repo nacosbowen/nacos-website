@@ -4,7 +4,7 @@ import arrow from "../../public/icons/Arrow - Down Circle.svg";
 import { useNacos } from "../../contexts/nacosContext";
 import { Link } from "react-router-dom";
 
-const formatDate = (dateString) => {
+export const formatDate = (dateString) => {
   const date = new Date(dateString);
   return new Intl.DateTimeFormat("en-US", {
     year: "numeric",
@@ -24,15 +24,15 @@ const TheBlogs = () => {
         : item.bodyText,
   }));
 
-  if (!allBlogs)
+  if (!allBlogs.length)
     return (
       <div>
-        <h1>No blogs!</h1>
+        <p className="text-3xl font-bold text-center p-10">No blogs!</p>
       </div>
     );
   return (
     <Fragment>
-      <div className="md:px-[3rem] px-[2rem] md:py-2 lg:px-[4rem] mt-[3rem] lg:mt-[6rem]  lg:py-4 mb-10">
+      <div className="md:px-[3rem] px-[2rem] md:py-2 lg:px-[4rem] mt-[3rem] lg:mt-[4rem]  lg:py-4 mb-10">
         <div className="grid gap-[2rem] grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 md:gap-[1.5rem]">
           {blog.map((blogItem, i) => (
             <div
