@@ -13,6 +13,7 @@ const Blogs = lazy(() => import("./pages/blogs"));
 const PastQuestions = lazy(() => import("./pages/pastQuestions"));
 const LevelAdvisers = lazy(() => import("./pages/levelAdvisers"));
 const BlogDesc = lazy(() => import("./pages/blogDesc"));
+const PageNotFound = lazy(() => import("./pages/pageNotFound"));
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
             <Route path="/pastQuestions" element={<PastQuestions />} />
             <Route path="/level-advisers" element={<LevelAdvisers />} />
             <Route path="/blogDesc/:id" element={<BlogDesc/>} />
-            <Route path="*" element={<p>Page not found</p>} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
       </NacosContext>
     </Suspense>

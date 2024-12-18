@@ -34,17 +34,17 @@ const ReadBlogs = () => {
 
               <div className="mt-10" key={key}>
                 <div className="lg:grid lg:grid-cols-3 ">
-                  <div className=" lg:hidden ">
-                    <div className=" mx-auto flex justify-center  items-center my-10">
+                  <div className="lg:hidden">
+                    <div className="mx-auto flex justify-center items-center my-10">
                       <img
                         className="flex justify-center items-center"
-                        src={blg?.image}
+                        src={blg?.imageUrl}
                         alt="blogimage"
                       />
                     </div>
                   </div>
                   <div className="col-span-2">
-                    <h1 className="font-bold mb-4 lg:w-[80%] md:text-left text-center text-[1.5rem] sm:text-xl md:text-6xl  first-letter leading-[28px] sm:leading-[5rem] ">
+                    <h1 className="font-bold mb-4 lg:w-[80%] md:text-left text-center text-[1.5rem] sm:text-xl md:text-[59px]  first-letter leading-[28px] sm:leading-[5rem] ">
                       {blg?.headerText}
                     </h1>
                     <p className="text-[10px] sm:text-[1.2rem] md:text-[1.5rem] font-normal leading-[21px] sm:leading-[3rem] sm:tracking-tight">
