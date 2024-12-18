@@ -37,7 +37,7 @@ const ReadBlogs = () => {
               <div className="my-10" key={key}>
                 <div className="">
                   <div className="md:hidden">
-                    <div className="mx-auto flex justify-center items-center mt-10">
+                    <div className="mx-auto flex justify-center items-center mt-10 mb-3">
                       <img
                         className="flex justify-center items-center"
                         src={blg?.imageUrl}
