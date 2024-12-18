@@ -22,9 +22,9 @@ const ReadBlogs = () => {
 
   return (
     //
-    <div className=" px-8  md:px-[3rem] py-2 lg:px-[4rem] ">
+    <div className="bg-grey px-8  md:px-[3rem] py-2 lg:px-[4rem] ">
       {blogArray?.map((blg, key) => (
-        <div key={key}>
+        <div key={blg._id}>
           <div className="all-blogs">
             <div className="mt-10">
               <h3 className="font-medium text-[1.2rem] text-center sm:text-[1.8rem] leading-normal">
@@ -37,7 +37,7 @@ const ReadBlogs = () => {
               <div className="my-10" key={key}>
                 <div className="">
                   <div className="md:hidden">
-                    <div className="mx-auto flex justify-center items-center my-10">
+                    <div className="mx-auto flex justify-center items-center mt-10">
                       <img
                         className="flex justify-center items-center"
                         src={blg?.imageUrl}
