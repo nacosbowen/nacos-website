@@ -44,7 +44,7 @@ const TheBlogs = () => {
                 style={{ backgroundImage: `url(${blogItem.imageUrl})` }}
               ></div>
 
-              <div className="p-6">
+              <div className="p-6 md:pb-2 grid grid-rows-[auto,auto,1fr,auto] min-h-[18.5rem]">
                 <p className="text-[20px] font-semibold font-[Poppins] text-sm mb-2">
                   {formatDate(blogItem.date)}
                 </p>
