@@ -1,32 +1,98 @@
-const Staff = ({ title, data }) => {
+import { motion } from "framer-motion";
+
+const Staff = ({ data }) => {
   return (
     <div>
-      <p className="font-bold text-lg lg:text-3xl mb-8">{title}</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20  gap-y-12 lg:gap-y-20">
-        {data.map((levelAdviser, i) => (
-          <div key={i} className="flex items-center gap-3">
-            <img
-              src={levelAdviser.image}
-              alt=""
-              className="w-20 h-20 lg:w-[200px] lg:h-[200px] rounded-l-[8px]"
-            />
-            <div className="flex flex-col gap-3 text-sm md:text-base">
+      {data.map((authorities, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: i * 0.2 }}
+          viewport={{ once: true }}
+        >
+          <h1 className="text-xl lg:text-3xl font-bold md:text-left text-center">
+            {authorities.department}
+          </h1>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h1 className="text-xl font-extrabold mt-[30px] mb-[24px]">
+              Program Coordinator
+            </h1>
+            <div className="flex items-center gap-3">
+              <img
+                src={authorities.headOfProgram.image}
+                alt={authorities.headOfProgram.name}
+                className="w-[100px] h-[100px] rounded-l-[8px]"
+              />
               <div>
-                <strong>Name: </strong>
-                <span>{levelAdviser.name}</span>
-              </div>
-              <div>
-                <strong>Office: </strong>
-                <span>{levelAdviser.office}</span>
-              </div>
-              <div>
-                <strong>Phone: </strong>
-                <span>{levelAdviser.phone}</span>
+                <div>
+                  <strong>Name: </strong>
+                  <span>{authorities.headOfProgram.name}</span>
+                </div>
+                <div>
+                  <strong>Office: </strong>
+                  <span>{authorities.headOfProgram.office}</span>
+                </div>
+                <div>
+                  <strong>Phone: </strong>
+                  <span>{authorities.headOfProgram.phone}</span>
+                </div>
+                <div>
+                  <strong>Department: </strong>
+                  <span>{authorities.headOfProgram.department}</span>
+                </div>
               </div>
             </div>
+          </motion.div>
+
+          <div className="mt-5">
+            <h1 className="text-xl font-extrabold mb-[24px]">Level Advisers</h1>
+            <div className="flex flex-wrap md:gap-5 flex-shrink-0">
+              {authorities.levelAdviser.map((advisers, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-center gap-3 mb-[50px]">
+                    <img
+                      src={advisers.image}
+                      alt={advisers.name}
+                      className="w-[100px] h-[100px] rounded-l-[8px]"
+                    />
+                    <div>
+                      <div>
+                        <strong>Name: </strong>
+                        <span>{advisers.name}</span>
+                      </div>
+                      <div>
+                        <strong>Office: </strong>
+                        <span>{advisers.office}</span>
+                      </div>
+                      <div>
+                        <strong>Level: </strong>
+                        <span>{advisers.level}</span>
+                      </div>
+                      <div>
+                        <strong>Phone: </strong>
+                        <span>{advisers.phone}</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
+        </motion.div>
+      ))}
     </div>
   );
 };
