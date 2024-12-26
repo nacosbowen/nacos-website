@@ -10,8 +10,9 @@ const Staff = ({ data }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: i * 0.2 }}
           viewport={{ once: true }}
+          className="mb-8 md:mb-12"
         >
-          <h1 className="text-xl lg:text-3xl font-bold md:text-left text-center">
+          <h1 className="text-2xl lg:text-3xl font-black text-center uppercase underline">
             {authorities.department}
           </h1>
 
@@ -21,9 +22,9 @@ const Staff = ({ data }) => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h1 className="text-xl font-extrabold mt-[30px] mb-[24px]">
+            <h2 className="text-xl font-bold mt-[20px] mb-[24px]">
               Program Coordinator
-            </h1>
+            </h2>
             <div className="flex items-center gap-3">
               <img
                 src={authorities.headOfProgram.image}
@@ -52,7 +53,7 @@ const Staff = ({ data }) => {
           </motion.div>
 
           <div className="mt-5">
-            <h1 className="text-xl font-extrabold mb-[24px]">Level Advisers</h1>
+            <h2 className="text-xl font-bold mb-[24px]">Level Advisers</h2>
             <div className="flex flex-wrap md:gap-5 flex-shrink-0">
               {authorities.levelAdviser.map((advisers, index) => (
                 <motion.div

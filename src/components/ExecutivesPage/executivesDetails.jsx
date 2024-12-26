@@ -1,3 +1,4 @@
+import { FaXTwitter } from "react-icons/fa6";
 import { useNacos } from "../../contexts/nacosContext";
 import Loader from "../loader/Loader";
 import instagram from "./instagram.svg";
@@ -28,7 +29,7 @@ const ExecutivesDetails = () => {
   // }
 
   return (
-    <div>
+    <div className="mb-10">
       <>
         <div className="mt-10 px-4 max-w-[731px] mx-auto">
           <h1 className="text-[1.5rem] sm:text-[2rem] font-semibold text-left md:text-center">
@@ -39,7 +40,7 @@ const ExecutivesDetails = () => {
             {` ${executiveYear}/${executiveYear + 1} `}Academic session
           </p>
         </div>
-        <div className="grid mt-8 md:mt-16 md:grid-cols-3 grid-cols-2 max-[375px]:grid-cols-1 gap-y-[53px] lg:gap-y-[100px] max-w-[1550px] mx-auto">
+        <div className="grid mt-8 md:mt-16 md:grid-cols-3 grid-cols-2 max-[375px]:grid-cols-1 gap-x-3 gap-y-[53px] lg:gap-y-[100px] max-w-[1550px] mx-auto px-2">
           {excos.map((excos, i) => (
             <motion.div
               key={i}
@@ -73,7 +74,7 @@ const ExecutivesDetails = () => {
                     boxShadow: "0px 1.4px 7.02px 0px #00000040",
                   }}
                 >
-                  <motion.a
+                  {excos?.instagram && <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.7 }}
                     className="cursor-pointer w-[32px] md:w-[40.95px] md:h-[40.95px] h-[32px] flex items-center justify-center bg-[#FFFFFF] rounded-[13.48px]"
@@ -87,8 +88,19 @@ const ExecutivesDetails = () => {
                       alt=""
                       className="md:w-[25.38px] md:h-[25.38px]"
                     />
-                  </motion.a>
-                  <motion.a
+                  </motion.a>}
+                  {excos?.twitter && <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.7 }}
+                    className="cursor-pointer w-[32px] md:w-[40.95px] md:h-[40.95px] h-[32px] flex items-center justify-center bg-[#FFFFFF] rounded-[13.48px]"
+                    href={excos?.twitter}
+                    style={{
+                      boxShadow: " 0px 0.79px 8.72px 0px #00000026",
+                    }}
+                  >
+                    <FaXTwitter/>
+                  </motion.a>}
+                  {excos?.linkedIn && <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.7 }}
                     className="cursor-pointer w-[32px] md:w-[40.95px] md:h-[40.95px] h-[32px] flex items-center justify-center bg-[#FFFFFF] rounded-[13.48px]"
@@ -102,7 +114,7 @@ const ExecutivesDetails = () => {
                       alt=""
                       className="md:w-[25.38px] md:h-[25.38px]"
                     />
-                  </motion.a>
+                  </motion.a>}
                 </div>
               </div>
               {/* <div className="flex justify-center ">
