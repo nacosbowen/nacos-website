@@ -4,6 +4,7 @@ import ReadBlogs from "../components/BlogsPage/readBlogs";
 import TheBlogs from "../components/BlogsPage/TheBlogs";
 import Partner from "../components/AboutPage/partners";
 import Footer from "../components/FirstPage/footer";
+import ScrollToTop from "../ui/ScrollToTop";
 const Blogs = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const Blogs = () => {
       <ReadBlogs />
       <TheBlogs />
       <Partner />
+      <ScrollToTop/>
       <Footer />
     </div>
   );

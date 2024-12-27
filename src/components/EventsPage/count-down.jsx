@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 // NOTE: Change this date to whatever date you want to countdown to :)
-const COUNTDOWN_FROM = "05/1/2024";
+const COUNTDOWN_FROM = "1/20/2025"; //mm/dd/yyyy
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
@@ -66,7 +66,7 @@ const CountdownItem = ({ num, text }) => {
     );
   }
   return (
-    <div className="font-mono w-1/4 h-24 md:h-36 flex flex-col gap-1 md:gap-2 items-center justify-center border-r-[1px] border-slate-200">
+    <div className="font-mono w-1/4 h-24 md:h-36 flex flex-col gap-1 md:gap-2 items-center justify-center border-r-[1px] last-of-type:border-r-0 border-slate-200">
       <div className="w-full text-center relative overflow-hidden">
         <AnimatePresence mode="popLayout">
           <motion.span

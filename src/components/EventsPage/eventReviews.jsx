@@ -1,24 +1,24 @@
 // import eventPicture from "../../public/images/EventFlyer/eventFlyer-1.png";
 
 const reviews = [
-  // {
-  //   name: "Zannou Daniel",
-  //   comment:
-  //     " Tech Fest was more than just an event; it was a catalyst for personal and professional growth. I am grateful for the opportunity to have been a part of this extraordinary experience.",
-  //   rate: 4,
-  // },
-  // {
-  //   name: "Sonia Kajotoni",
-  //   comment:
-  //     "Techfest was a bang, amazing tech personals present can’t wait for the next one. #techfestall the way.",
-  //   rate: 5,
-  // },
-  // {
-  //   name: "Sophia Ajibola",
-  //   comment:
-  //     "Tech Fest was an incredible event that left a lasting impact on me. From engaging with inspiring speakers to forging meaningful connections, the experience has been transformative.",
-  //   rate: 5,
-  // },
+  {
+    name: "Zannou Daniel",
+    comment:
+      " Tech Fest was more than just an event; it was a catalyst for personal and professional growth. I am grateful for the opportunity to have been a part of this extraordinary experience.",
+    rate: 4,
+  },
+  {
+    name: "Sonia Kajotoni",
+    comment:
+      "Techfest was a bang, amazing tech personals present can’t wait for the next one. #techfestall the way.",
+    rate: 5,
+  },
+  {
+    name: "Sophia Ajibola",
+    comment:
+      "Tech Fest was an incredible event that left a lasting impact on me. From engaging with inspiring speakers to forging meaningful connections, the experience has been transformative.",
+    rate: 5,
+  },
 ];
 
 const EventReview = () => {

@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 // import president from "../../public/images/Excos-pictures/President-2.jpg";
 // import vice_president from "../../public/images/Excos-pictures/Vice-President.jpg";
 // import general_secretary from "../../public/images/Excos-pictures/General_Secretary.jpg";
 // import financial_secretary from "../../public/images/Excos-pictures/Financial_Secretary.jpg";
 import arrow from "../../public/icons/Arrow - Down Circle.svg";
 import { useNacos } from "../../contexts/nacosContext";
+import { scrollToTop } from "../../utils/utils";
+import FloatInAnimation from "../../ui/FloatInAnimation";
+
 
 const Executives = () => {
   const { excos } = useNacos();
@@ -31,7 +35,7 @@ const Executives = () => {
       </h1>
       <div className="grid lg:grid-cols-4 mt-8 md:mt-16 md:grid-cols-3 grid-cols-2 max-[480px]:grid-cols-1 gap-4">
         {executives?.map((executive, i) => (
-          <div key={i}>
+          <FloatInAnimation key={i} delay={i * 0.2}>
             <img
               src={executive?.url}
               className=" aspect-square object-contain rounded-2xl"
@@ -44,13 +48,13 @@ const Executives = () => {
             <p className="text-[#000] text-[0.8rem] md:text-[1.25rem] font-medium leading-[normal] text-center">
               {executive?.position}
             </p>
-          </div>
+          </FloatInAnimation>
         ))}
       </div>
       <div className="flex sm:justify-end justify-center items-center mt-6 sm:items-end mb-6">
-        <Link to="/executives">
-          <button className="flex flex-row items-center gap-2 rounded-sm px-4 py-2">
-            <p className="flex items-center gap-1">See all executives</p>
+        <Link to="/executives" onClick={scrollToTop}>
+          <button className="flex flex-row items-center gap-2 rounded-sm px-4 py-2 hover:translate-x-1 active:scale-[.98] transition-all duration-100 ease-linear text-dark hover:text-darkorange">
+            <p className="flex items-center gap-1">See All Executives</p>
             <img src={arrow} alt="arrow" />
           </button>
         </Link>

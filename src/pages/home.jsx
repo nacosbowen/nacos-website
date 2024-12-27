@@ -17,7 +17,7 @@ const Home = () => {
 
       <Executives />
       {/* <BLOG /> */}
-      <BLOG />
+      <BLOG header="Blog" link="/blogs" />
       {/* <Subscribe/> */}
       <Footer />
     </div>

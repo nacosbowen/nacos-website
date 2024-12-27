@@ -3,10 +3,9 @@ import React from "react";
 
 const EventsPage = () => {
   const { events } = useNacos();
-  console.log(events);
 
   const mainEvent = events.filter((events) => events.type === "main");
-  console.log(mainEvent);
+
   return (
     <div className="max-h-full">
       <div className="events h-[90vh]  lg:grid grid-cols-2 lg:grid-rows-4 items-center md:flex md:flex-col">

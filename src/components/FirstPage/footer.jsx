@@ -6,6 +6,7 @@ import bowenLogo from "../../public/icons/BOWEN LOGO 1.svg";
 // import footerLogo from "../../../src/public/images/Home-Page/footer-logo.png";
 import { FaXTwitter, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../../utils/utils";
 
 const Footer = () => {
   const aboutUs = {
@@ -47,7 +48,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col justify-between items-center sm:items-start bg-darkorange py-4 md:px-[2.5rem] md:pt-8 md:pb-4 px-4">
+    <div className="w-full flex flex-col justify-between items-center sm:items-start bg-darkorange py-4 md:px-[2.5rem] md:pt-8 md:pb-4 px-4 z-10">
       <div className="w-full flex flex-col sm:flex-row flex-wrap gap-8 justify-between items-center sm:items-start sm:gap-16">
         {/* Footer Logo */}
         <div className="w-max h-fit min-w-[90px] flex flex-col justify-center items-center p-3 sm:p-5 bg-white rounded-2xl cursor-pointer">
@@ -73,7 +74,7 @@ const Footer = () => {
                 key={index}
                 className="text-[1rem] text-[#ddd] hover:text-white font-normal cursor-pointer hover:underline"
               >
-                <Link to={item.href} className="">
+                <Link to={item.href} className="" onClick={scrollToTop}>
                   {item.name}
                 </Link>
               </li>
@@ -89,19 +90,19 @@ const Footer = () => {
                 key={index}
                 className="text-[1rem] text-[#ddd] hover:text-white font-normal cursor-pointer  hover:underline"
               >
-                <Link to={item.href}>{item.name}</Link>
+                <Link to={item.href} onClick={scrollToTop}>{item.name}</Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Footer contact section */}
+        {/* Footer contact section*/}
       </div>
       <div className="flex flex-col justify-center items-center gap-2 sm:items-start mt-8">
         <h5 className="text-white font-bold text-[1.1rem]">Contact</h5>
         <a
           className="text-[#ddd] font-normal text-[.98rem] mb-3"
-          href="mailto:Nacosbowenuni@gmail.com"
+          href="mailto:nacosbowen@gmail.com"
         >
           nacosbowen@gmail.com
         </a>

@@ -27,7 +27,6 @@ const PastQuestions = () => {
         pastQuestions.semester.includes(semesters))
   );
 
-  console.log(filteredExam);
 
   if (!pastQuestions) return;
 

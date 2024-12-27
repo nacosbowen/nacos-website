@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "framer-motion": "^11.15.0",
+    "html-react-parser": "^5.2.1",
     "ldrs": "^1.0.2",
     "motion": "^11.15.0",
+    "nacos-website": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",

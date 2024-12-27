@@ -32,10 +32,10 @@ const ExecutivesDetails = () => {
     <div className="mb-10">
       <>
         <div className="mt-10 px-4 max-w-[731px] mx-auto">
-          <h1 className="text-[1.5rem] sm:text-[2rem] font-semibold text-left md:text-center">
+          <h1 className="text-[1.5rem] sm:text-[2rem] font-semibold text-center">
             NACOS EXECUTIVES
           </h1>
-          <p className=" text-base sm:text-[1.5rem] text-left md:text-center">
+          <p className=" text-base sm:text-[1.5rem] text-center">
             Introducing, NACOS EXECUTIVES for
             {` ${executiveYear}/${executiveYear + 1} `}Academic session
           </p>

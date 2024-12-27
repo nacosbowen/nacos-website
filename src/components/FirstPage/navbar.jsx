@@ -115,13 +115,13 @@ const Navbar = () => {
                 onClick={toggleAbout}
               >
                 <div className="flex items-center cursor-pointer gap-2">
-                  <div
+                  <button
                     className="font-Poppins text-base font-medium text-navdark
                   cursor-pointer"
                     href="/about"
                   >
                     About Us
-                  </div>
+                  </button>
 
                   <img src={arrowdown} alt="" />
                 </div>
@@ -144,12 +144,11 @@ const Navbar = () => {
             <li>
               <div className="flex items-center gap-2 relative More">
                 <div className="flex items-center gap-2" onClick={toggleMore}>
-                  <Link
+                  <button
                     className="font-Poppins text-base font-medium text-navdark"
-                    to={"#"}
                   >
                     More
-                  </Link>
+                  </button>
                   <img src={arrowdown} alt="" />
                 </div>
                 {showMore && (

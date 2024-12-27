@@ -1,8 +1,10 @@
-import arrow from "../../public/icons/Arrow - Down Circle.svg";
+import parse from "html-react-parser"
 import { useNacos } from "../../contexts/nacosContext";
-import { formatDate } from "./TheBlogs";
-import { GoDotFill } from "react-icons/go";
+import { calculateReadTime, formatDate, getInitials } from "../../utils/utils";
 import { LuDot } from "react-icons/lu";
+import Divider from "../../ui/Divider";
+import BlogPage from "./BlogPage";
+
 // const filter = [
 //   "All",
 //   "Design",
@@ -15,10 +17,11 @@ import { LuDot } from "react-icons/lu";
 const ReadBlogs = () => {
   const { blogWeek } = useNacos();
 
+  if (!blogWeek) return;
+
   const blogArray = Array.isArray(blogWeek) ? blogWeek : [blogWeek];
 
-
-  if (!blogWeek) return;
+  const readTime = blogArray.length && calculateReadTime(blogArray[0]?.bodyText)
 
   return (
     //
@@ -29,13 +32,13 @@ const ReadBlogs = () => {
             <div className="mt-10">
               <h3 className="font-medium text-[1.2rem] text-center sm:text-[1.8rem] leading-normal">
                 BLOG OF
-                <span className="bg-[--grey2] rounded-2xl text-[1.2rem] sm:text-[1.7rem] ml-2 py-1 sm:py-2 px-1 sm:px-3 font-bold">
+                <span className="bg-[--grey2] rounded-2xl text-[1.2rem] sm:text-[1.7rem] ml-2 py-1 sm:py-2 px-2 sm:px-3 font-bold">
                   THE WEEK
                 </span>
               </h3>
 
               <div className="my-10" key={key}>
-                <div className="">
+                <div className="max-w-[65rem] mx-auto">
                   <div className="md:hidden">
                     <div className="mx-auto flex justify-center items-center mt-10 mb-3">
                       <img
@@ -47,42 +50,39 @@ const ReadBlogs = () => {
                   </div>
                   <div className="col-span-2">
                     {/* Weekly blog header */}
-                    <div className="col-span-1 flex gap-5 w-full mb-8 items-center">
-                      <img src={blg?.imageUrl} alt="blogimage" className="hidden md:inline-block max-w-[20rem]" />
+                    <div className="col-span-1 flex gap-5 w-full mb-4 items-center">
+                      <div
+                        className="hidden md:inline-block h-[20rem] w-[70%] bg-cover bg-center"
+                        style={{ backgroundImage: `url(${blg.imageUrl})` }}
+                      ></div>
                       {/* Weekly blog details */}
                       <div className="w-full items-center">
-                        <h2 className="font-bold mb-4 text-[1.9rem] md:text-[2.4rem] lg:text-[2.9rem] first-letter  ">
+                        <h2 className="font-black mb-4 text-[1.9rem] md:text-[2.4rem] first-letter  ">
                           {blg?.headerText}
                         </h2>
-                        <div className="flex gap-1 text-[.8rem] lg:text-[.95rem] items-center whitespace-nowrap flex-wrap">
-                          <p>John Doe</p>
-                          <span><LuDot /></span>
-                          <p className="text-[#6B6B6B]">4 minute read</p>
-                          <span><LuDot /></span>
-                          <p className="text-[#6B6B6B]">
-                            {formatDate(blg?.date)}
-                            {/* <p className="text-[.8rem] md:text-[1rem] mb-4 font-bold leading-[21px] sm:leading-[3rem] sm:tracking-tight">
-                              {formatDate(blg?.date)}
-                            </p> */}
-                          </p>
-                        </div>
+                        <p className="text-[.95rem] text-[#6B6B6B] mb-4">{blg.blogSummary}</p>
+
                       </div>
                     </div>
+                    <Divider />
 
-                    <p className="text-[1rem] font-normal leading-[2rem] sm:tracking-tight">
-                      {blg?.bodyText}
-                    </p>
+                    <div className="flex gap-1 text-[.8rem] lg:text-[.95rem] items-center whitespace-nowrap flex-wrap">
+                      <span className="bg-[#555] flex justify-center rounded-full h-12 w-12 text-white font-black text-center items-center">{getInitials(blg.authorName)}</span>
+                      <p>{blg?.authorName}</p>
+                      <span><LuDot /></span>
+                      <p className="text-[#6B6B6B]">{readTime} minute read</p>
+                      <span><LuDot /></span>
+                      <p className="text-[#6B6B6B]">
+                        {formatDate(blg?.date)}
 
-                    {/* <button className="flex flex-row items-center gap-2 rounded-sm bg-white mt-10 border border-white border-solid">
-                      <a href={`/blogDesc/${blg?._id}`}>
-                        <p className="text-[10px] sm:text-[1.2rem] md:text-[1.5rem] font-normal leading-[21px] sm:leading-[3rem] sm:tracking-tight">
-                          Read More
-                        </p>
-                      </a>
-                      <img src={arrow} alt="arrow" />
-                    </button> */}
+                      </p>
+                    </div>
 
+                    <Divider />
 
+                    <div id="bodyText" className="mt-8" >
+                      {parse(blg?.bodyText)}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -92,5 +92,8 @@ const ReadBlogs = () => {
       ))}
     </div>
   );
+
+
+  // return <BlogPage blog={blogArray}/>;
 };
 export default ReadBlogs;

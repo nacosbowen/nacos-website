@@ -3,6 +3,8 @@ import image from "../../public/images/Rectangle 1560.svg";
 import arrow from "../../public/icons/Arrow - Down Circle.svg";
 import { Link } from "react-router-dom";
 import { useNacos } from "../../contexts/nacosContext";
+import { scrollToTop } from "../../utils/utils";
+import FloatInAnimation from "../../ui/FloatInAnimation";
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -12,10 +14,10 @@ const formatDate = (dateString) => {
     day: "numeric",
   }).format(date);
 };
-const BLOG = () => {
+const BLOG = ({ header, link, blogList }) => {
   const { allBlogs } = useNacos();
 
-  const blog = allBlogs.slice(0, 3).map((item) => ({
+  const blog = blogList ? blogList : allBlogs.slice(0, 3).map((item) => ({
     ...item,
     truncatedBody:
       item.bodyText.length > 150
@@ -34,14 +36,15 @@ const BLOG = () => {
     );
 
   return (
-    <div className="md:px-[3rem] py-6 px-6 lg:px-[2rem] ">
+    <div className="md:px-[3rem] py-6 px-6 lg:px-[2rem] box-border">
       <h1 className="text-black leading-[150%] text-center font-semibold md:mb-[3rem] mb-4 text-[2rem] ">
-        Blog
+        {header}
       </h1>
       <div className="grid gap-[2rem] grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 md:gap-[1.5rem]">
         {blog.map((blogItem, i) => (
-          <div
+          <FloatInAnimation
             key={i}
+            delay={i * 0.2}
             className="shadow-lg rounded-[10px] overflow-hidden bg-white"
           >
             <div
@@ -49,19 +52,22 @@ const BLOG = () => {
               style={{ backgroundImage: `url(${blogItem.imageUrl})` }}
             ></div>
 
-            <div className="p-6  grid grid-rows-[auto,auto,1fr,auto] min-h-[16.5rem]">
-              <p className="text-[20px] font-semibold font-[Poppins] text-sm mb-2">
-                {formatDate(blogItem.date)}
-              </p>
-              <h2 className="text-[22px] md:text-[24px] font-semibold font-[Poppins] mb-2">
-                {blogItem.headerText}
-              </h2>
-              <p className="text-[15px] md:text-[16px] font-normal font-[Poppins] mb-2">
-                {blogItem.truncatedBody}
-              </p>
+            <div className="p-6 flex flex-col justify-between min-h-[18rem]" >
+              <div>
+                <p className="text-[20px] font-semibold font-[Poppins] text-sm mb-2">
+                  {formatDate(blogItem.date)}
+                </p>
+                <h2 className="text-[22px] md:text-[24px] font-semibold font-[Poppins] mb-2 line-clamp-2">
+                  {blogItem.headerText}
+                </h2>
+                <p className="text-[15px] md:text-[16px] font-normal font-[Poppins] mb-2 line-clamp-4 text-[#6B6B6B]">
+                  {blogItem.blogSummary}
+                </p>
+              </div>
               <Link
                 to={`/blogDesc/${blogItem._id}`}
-                className="flex items-center gap-1 w-fit"
+                className="flex items-center gap-1 w-fit mt-auto hover:scale-[.98] active:scale-[.98] transition-all duration-100 ease-linear"
+                onClick={scrollToTop}
               >
                 <p className="text-[0.8rem] md:text-[1rem] font-normal leading-[21px] sm:leading-[3rem] sm:tracking-tight">
                   Read More
@@ -69,17 +75,17 @@ const BLOG = () => {
                 <img src={arrow} alt="arrow" />
               </Link>
             </div>
-          </div>
+          </FloatInAnimation>
         ))}
       </div>
-      <div className="flex sm:justify-end justify-center items-center mt-6 sm:items-end mb-6">
-        <Link to="/blogs">
-          <button className="flex flex-row items-center gap-2 rounded-sm bg-white px-4 py-2 border border-white border-solid">
-            <p className="text-dark">View other Blogs</p>
+      {link && <div className="flex sm:justify-end justify-center items-center mt-6 sm:items-end mb-6" onClick={scrollToTop}>
+        <Link to={link}>
+          <button className="flex flex-row items-center gap-2 rounded-sm bg-white px-4 py-2 border border-white border-solid hover:translate-x-1 active:scale-[.98] transition-all duration-100 ease-linear text-dark hover:text-darkorange">
+            <p className="">More from Our Blog</p>
             <img src={arrow} alt="arrow" />
           </button>
         </Link>
-      </div>
+      </div>}
     </div>
   );
 };
