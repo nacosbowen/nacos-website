@@ -17,7 +17,7 @@ export const formatDate = (dateString) => {
   }).format(date);
 };
 
-const averageReadingSpeed = 250;
+const averageReadingSpeed = 200;
 
 function calculateWordCount(content) {
   const words = content.trim().split(/\s+/);
