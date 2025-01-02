@@ -190,7 +190,7 @@ const Navbar = () => {
             </div>
 
             <div className="w-full flex flex-col sm:w-[100%] gap-[3rem] absolute top-[60px]">
-              <ul className="flex flex-col lg:hidden gap-[1rem] relative">
+              <ul className="flex flex-col p-3 lg:hidden gap-[1rem] relative">
                 <hr className="w-full" />
                 {
                   navLinks.map((linkItem) => (

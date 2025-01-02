@@ -4,7 +4,7 @@ waveform.register();
 function Loader() {
   return (
     <div>
-      <div className="absolute top-1/2 left-1/2 text-center">
+      <div className="absolute top-1/2 left-1/2 translate-x-[-50%] text-center">
         <l-waveform
           size="40"
           stroke="3.5"

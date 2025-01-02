@@ -34,23 +34,23 @@ const OurDepartments = () => {
         "In response to the growing importance of safeguarding digital assets, the Cybersecurity department offers specialized training in protecting information systems and networks from cyber threats. Through hands-on experience in risk assessment, encryption techniques, and incident response, students develop the critical skills needed to defend against cyber attacks and ensure the integrity of digital infrastructure.",
     },
     {
-      name: "Information technology ",
+      name: "Information Technology ",
       icon: informationTechnology,
       details:
         " The Information Technology department caters to those interested in the management and utilization of technology within organizations. With a blend of coursework in systems analysis, database management, and network administration, students gain the expertise to effectively implement and optimize technology solutions to meet business needs.",
     },
   ];
   return (
-    <div className="sm:px-[3rem] px-[1.5rem] my-12  lg:px-[4rem] ">
+    <div className="sm:px-[3rem] px-[1.5rem] my-12 lg:px-[4rem] max-w-[1600px] mx-auto">
       <div>
-        <h1 className="text-center text-[20px] leading-[72px] font-semibold sm:text-[48px] mb-[30px] md:mb-[100px]">
-          Our Departments
+        <h1 className="text-center text-[1.6rem] leading-[72px] font-semibold sm:text-[2rem] mb-[1rem] md:mb-[2.5rem] uppercase">
+          Our Programmes
         </h1>
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex gap-4 items-center justify-between dept-button-container relative before:top-[28%] md:before:top-[35%]">
         {departments.map((dep, i) => (
-          <div key={i} className="">
-            <div className=" flex justify-center items-center   flex-col">
+          <div key={i} className="dept-button">
+            <div className=" flex justify-center items-center flex-col ">
               <div
                 className={`bg-[#A71E1E] w-fit rounded-full p-2 sm:p-4 border-[0.5rem] sm:border-[1rem] cursor-pointer border-[#EFEBEB] ${
                   state === i ? "bg-[#A71E1E]" : "bg-[#D4CDCD]"
@@ -60,36 +60,37 @@ const OurDepartments = () => {
                 }}
               ></div>
 
-              <h1
-                className={`text-[6px] sm:text-[16px] leading-[24px] font-semibold text-[#] text-center ${
+              <h3
+                className={`text-[.7rem] sm:text-[16px] md:leading-[24px] font-semibold text-[#] text-center ${
                   state === i ? "text-[#000]" : "text-[#D4CDCD]"
                 } `}
               >
                 {dep}
-              </h1>
+              </h3>
             </div>
           </div>
         ))}
       </div>
-      <div className="my-12">
-        <h1 className="text-[14px] md:text-[24px] text-[#657174] font-semibold leading-[39px] text-left ">
+      <div className="my-12 max-w-[1000px] mx-auto">
+        <h3 className="text-[14px] md:text-[24px] text-[#657174] font-semibold leading-[39px] text-left ">
           Department
-        </h1>
-        <div className="grid grid-cols-1 xl:grid-cols-2  gap-8">
-          <div className="flex xl:hidden justify-center items-center w-[200px] md:w-[450px] mx-auto">
-            <img src={departmentInfo[state].icon} alt="" />
-          </div>
-          <div>
-            <h1 className="text-[30px] xl:text-left text-center sm:text-[64px] leading-[40px] sm:leading-[96px] font-semibold text-[#000] mb-[20px]">
-              {departmentInfo[state].name}
-            </h1>
+        </h3>
+        <div className="">
+        
+          <h3 className="text-[30px] xl:text-left text-center sm:text-[2.2rem] leading-[40px] sm:leading-[96px] font-semibold text-[#000]">
+            {departmentInfo[state].name}
+          </h3>
 
-            <p className="text-[16px] sm:text-[17px] font-medium leading-[217%] sm:leading-[30px] text-justify ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center dept-desc">
+            <div className="flex md:hidden justify-center items-center w-[200px] md:w-[450px] mx-auto">
+              <img src={departmentInfo[state].icon} alt="" />
+            </div>
+            <p className="text-[16px] sm:text-[17px] font-medium leading-[217%] sm:leading-[30px] md:leading-[220%] ">
               {departmentInfo[state].details}
             </p>
-          </div>
-          <div className="hidden w-full xl:block justify-center items-center">
-            <img className="w-[90%]" src={departmentInfo[state].icon} alt="" />
+            <div className="hidden w-full md:block justify-center items-center">
+              <img className="w-[90%]" src={departmentInfo[state].icon} alt="" />
+            </div>
           </div>
         </div>
       </div>

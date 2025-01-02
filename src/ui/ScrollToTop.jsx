@@ -22,7 +22,7 @@ function ScrollToTop() {
   }, []);
 
   return (
-    <div className={`bg-darkorange text-white fixed bottom-5 right-5 rounded-md text-xl transition-all ease-linear duration-300 ${isVisible ? 'translate-y-0 block' : 'translate-y-16'}`}>
+    <div className={`bg-darkorange text-white fixed bottom-5 right-5 rounded-md text-xl transition-all ease-linear duration-300 z-50 ${isVisible ? 'translate-y-0 block' : 'translate-y-16'}`}>
       <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className='p-2'>
         <IoMdArrowRoundUp />
       </button>
