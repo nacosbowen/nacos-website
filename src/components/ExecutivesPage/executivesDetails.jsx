@@ -5,7 +5,7 @@ import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
 import { motion } from "motion/react";
 
-const executiveYear = new Date().getFullYear();
+const executiveYear = 2024;
 
 const ExecutivesDetails = () => {
   const { excos, isLoading } = useNacos();
