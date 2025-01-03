@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BlogPage from '../components/BlogsPage/BlogPage'
 import BLOG from "../components/FirstPage/blogg.jsx"
 import { useNavigate, useParams } from 'react-router-dom'
@@ -20,6 +20,10 @@ const blogDesc = () => {
   const otherBlogArray = allBlogs.filter((blog) => blog?._id !== id);
 
   function GoBackButton({children = "Go back"}){
+    useEffect(() => {
+      scrollToTop();
+    }, []);
+
     return (
       <button
           onClick={() => {

@@ -1,9 +1,15 @@
+import { useEffect } from "react";
+import { scrollToTop } from "../utils/utils";
 import Footer from "../components/FirstPage/footer";
 import Navbar from "../components/FirstPage/navbar";
 import Staff from "../components/LevelAdvisersPage/Advisers";
 import authorities from "../components/LevelAdvisersPage/data";
 
 const LevelAdvisers = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+  
   return (
     <div>
       <Navbar />

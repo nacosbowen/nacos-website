@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { scrollToTop } from "../utils/utils.js";
 import Navbar from "../components/FirstPage/navbar.jsx";
 import EventsPage from "../components/EventsPage/eventsPage.jsx";
 import CountDown from "../components/EventsPage/count-down.jsx";
@@ -8,6 +10,10 @@ import Internet from "../components/AboutPage/partners.jsx";
 import Footer from "../components/FirstPage/footer.jsx";
 
 const Events = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <div>
       <Navbar />

@@ -4,10 +4,15 @@ import ExamQuestions from "../components/pastQuestions/ExamQuestions";
 import FilterExamQuestions from "../components/pastQuestions/FilterExamQuestions";
 import Partner from "../components/AboutPage/partners";
 import Footer from "../components/FirstPage/footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNacos } from "../contexts/nacosContext";
+import { scrollToTop } from "../utils/utils";
 
 const PastQuestions = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   const [Dept, setDept] = useState("Department");
   const [levels, setLevel] = useState("Level");
   const [semesters, setSemester] = useState("Semester");

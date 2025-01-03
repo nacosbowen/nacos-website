@@ -6,8 +6,6 @@ import { FaXTwitter, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { scrollToTop } from "../../utils/utils";
 
-// const currentYear = 
-
 const Footer = () => {
   const aboutUs = {
     title: "About Us",
@@ -74,7 +72,7 @@ const Footer = () => {
                 key={index}
                 className="text-[1rem] text-[#ddd] hover:text-white font-normal cursor-pointer hover:underline"
               >
-                <Link to={item.href} className="" onClick={scrollToTop}>
+                <Link to={item.href} className="">
                   {item.name}
                 </Link>
               </li>
