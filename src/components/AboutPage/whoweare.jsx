@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import rightArrow from "../../public/images/Home-Page/weui_arrow-filled.svg";
+import { motion } from "framer-motion";
+import FloatInAnimation from "../../ui/FloatInAnimation";
 
 const Whoweare = () => {
   const data = [
@@ -27,9 +28,9 @@ const Whoweare = () => {
       <div className="grid grid-cols-3 items-center justify-around text-center bg-grey mb-10">
         {
           data.map((item, index) => {
-            return <button 
-              key={index} 
-              onClick={()=>setActiveTab(index)}
+            return <button
+              key={index}
+              onClick={() => setActiveTab(index)}
               className={`px-1 py-3 w-[1fr] font-bold h-full text-md ${activeTab === index ? "bg-darkorange text-white" : ""}`}
             >
               {item.label}
@@ -37,24 +38,30 @@ const Whoweare = () => {
           })
         }
       </div>
-      
+
       {
         data.filter((item, index) => index === activeTab).map((item) => {
           const paragraphs = item.text.split('\n\n');
 
           return (
-            <div className="max-w-[1000px] mx-auto" key={item.label}>
-              <h1 className="text-dark text-[1.8rem]  font-semibold leading-[-0.057rem] text-left capitalize ">
-                {item.header}
-              </h1>
-              <p className="text-dark text-left text-base sm:text-[16px] font-normal leading-[217%] lg:text-[16px]">
-                {paragraphs[0]}
-              </p>
-              <br />
-              <p className="text-dark text-left text-base sm:text-[16px] font-normal leading-[217%] lg:text-[16px]">
-                {paragraphs[1]}
-              </p>
-            </div>
+            <FloatInAnimation>
+
+              <div
+                className="max-w-[1000px] mx-auto"
+                key={item.label}
+              >
+                <h1 className="text-dark text-[1.8rem]  font-semibold leading-[-0.057rem] text-left capitalize ">
+                  {item.header}
+                </h1>
+                <p className="text-dark text-left text-base sm:text-[16px] font-normal leading-[217%] lg:text-[16px]">
+                  {paragraphs[0]}
+                </p>
+                <br />
+                <p className="text-dark text-left text-base sm:text-[16px] font-normal leading-[217%] lg:text-[16px]">
+                  {paragraphs[1]}
+                </p>
+              </div>
+            </FloatInAnimation>
           )
         })
       }
