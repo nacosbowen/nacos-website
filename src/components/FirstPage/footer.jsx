@@ -2,11 +2,11 @@
 import React from "react";
 import nacoslogo from "../../public/icons/NACOS LOGO 1.svg";
 import bowenLogo from "../../public/icons/BOWEN LOGO 1.svg";
-// import footerLogo from "../../src/public/images/Home-Page/footer-logo.png"
-// import footerLogo from "../../../src/public/images/Home-Page/footer-logo.png";
 import { FaXTwitter, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { scrollToTop } from "../../utils/utils";
+
+// const currentYear = 
 
 const Footer = () => {
   const aboutUs = {
@@ -132,7 +132,7 @@ const Footer = () => {
       <div className="w-full flex justify-center items-center">
         <p className="text-white text-[8px] font-normal text-center sm:text-[14px] md:text-[16px] lg:text-[18px]">
           NACOS BOWEN is a registered trademark of Bowen University. &copy;
-          2021-2024
+          2021-{new Date().getFullYear()}
         </p>
       </div>
     </div>
