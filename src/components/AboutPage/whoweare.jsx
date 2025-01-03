@@ -44,11 +44,11 @@ const Whoweare = () => {
           const paragraphs = item.text.split('\n\n');
 
           return (
-            <FloatInAnimation>
+            <FloatInAnimation key={item.label}>
 
               <div
                 className="max-w-[1000px] mx-auto"
-                key={item.label}
+                
               >
                 <h1 className="text-dark text-[1.8rem]  font-semibold leading-[-0.057rem] text-left capitalize ">
                   {item.header}
