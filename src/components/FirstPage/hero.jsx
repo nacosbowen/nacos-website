@@ -17,7 +17,7 @@ const Hero = () => {
             Welcome To NACOS BOWEN CHAPTER
           </h1>
 
-          <p className="text-white sm:w-[88%] text-center font-semibold font-Poppins text-[1.4rem] sm:text-[2rem] md:text-[3rem] lg:text-[3.25981rem] my-6">
+          <p className="text-white sm:w-[88%] text-center font-semibold font-Poppins text-[1.4rem] sm:text-[2rem] md:text-[3rem] lg:text-[3.25981rem] my-4">
             Empowering Future Innovators through
             <br />
             {text}
