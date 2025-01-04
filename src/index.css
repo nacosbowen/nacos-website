@@ -54,10 +54,10 @@ code {
 }
 
 @keyframes slider {
-  0%, 20% { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url('./public/images/Rectangle 2.webp'); }
-  25%, 45% { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url('./public/images/Home-Page/Home-8.webp'); }
-  50%, 70% { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./public/images/Home-Page/Home-10.webp'); } /*Linear gradient to darken image*/
-  75%, 100% { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./public/images/Home-Page/Home-7.webp'); }/*Linear gradient to darken image*/
+  0%, 20% { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url('./public/images/Rectangle 2.jpg'); }
+  25%, 45% { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url('./public/images/Home-Page/Home-8.jpg'); }
+  50%, 70% { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./public/images/Home-Page/Home-10.jpg'); } /*Linear gradient to darken image*/
+  75%, 100% { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./public/images/Home-Page/Home-7.jpg'); }/*Linear gradient to darken image*/
 }
 
 .Abouthero {
