@@ -54,7 +54,7 @@ const TheBlogs = () => {
                   onClick={scrollToTop}
                 >
                   <p className="text-[0.8rem] md:text-[1rem] font-normal leading-[21px] sm:leading-[3rem] sm:tracking-tight">
-                    Read More
+                    Continue Reading
                   </p>
                   <img src={arrow} alt="arrow" />
                 </Link>
