@@ -76,12 +76,12 @@ const OurDepartments = () => {
                 }}
               ></div>
 
-              <h3
+              <h5
                 className={`text-[.7rem] sm:text-[16px] md:leading-[24px] font-semibold text-[#] text-center ${state === i ? "text-[#000]" : "text-[#D4CDCD]"
                   } `}
               >
                 {dep}
-              </h3>
+              </h5>
             </div>
           </div>
         ))}
@@ -93,9 +93,9 @@ const OurDepartments = () => {
         </h3>
         <div className="">
 
-          <h3 className="text-[30px] xl:text-left text-center sm:text-[2.2rem] leading-[40px] sm:leading-[96px] font-semibold text-[#000]">
+          <h5 className="text-[30px] xl:text-left text-center sm:text-[2.2rem] leading-[40px] sm:leading-[96px] font-semibold text-[#000]">
             {departmentInfo[state].name}
-          </h3>
+          </h5>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center dept-desc">
             <motion.div 

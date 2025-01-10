@@ -15,7 +15,7 @@ const About = () => {
               About Us
             </h1>
             <div className="lg:hidden my-[24px] flex justify-center items-center border-grey p-3 shadow-md">
-              <img src={about2} alt="" />
+              <img src={about2} alt="nacos bowen" />
             </div>
             <p className="text-dark md:text-[1.2rem] xl:text-center text-center text-base font-normal leading-[217%]  lg:hidden px-[.5rem] w-fit">
               NACOS BOWEN is dedicated to fostering academic excellence among
@@ -27,7 +27,7 @@ const About = () => {
             <Link to={'/about'}>
               <button className="lg:hidden bg-[#7D1515] flex mx-auto px-2 justify-center items-center rounded-[24px] mt-[22px]">
                 <p className="text-[.9rem] text-[#fff] p-[10px]">Learn More</p>
-                <img src={rightArrow} alt="" />
+                <img src={rightArrow} alt="arrow" />
               </button>
             </Link>
 
@@ -35,7 +35,7 @@ const About = () => {
             <div className="h-[500px] hidden lg:flex gap-[50px] mx-[5em] justify-center items-center">
               <div className="shadow p-[1rem] flex-1 min-w-[400px]">
                 <div className="h-full">
-                  <img src={about2} />
+                  <img src={about2} alt="nacos bowen" />
                 </div>
               </div>
               <div className="flex-1 text-left bg-[#A71E1E] text-white shadow-xl p-[2rem] min-w-[500px]">

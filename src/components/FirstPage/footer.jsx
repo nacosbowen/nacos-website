@@ -28,18 +28,22 @@ const Footer = () => {
 
   const socialLinks = [
     {
+      name: "TikTok",
       link: "https://www.tiktok.com/@nacosbowen",
       icon: <FaTiktok />,
     },
     {
+      name: "Instagram",
       link: "https://www.instagram.com/nacosbowen",
       icon: <FaInstagram />,
     },
     {
+      name: "X (f.k.a Twitter)",
       link: "https://twitter.com/nacosbu",
       icon: <FaXTwitter />,
     },
     {
+      name: "Linkedin",
       link: "https://www.linkedin.com/in/nacos-bowen-chapter-614a2625b/",
       icon: <FaLinkedin />,
     },
@@ -88,7 +92,7 @@ const Footer = () => {
                 key={index}
                 className="text-[1rem] text-[#ddd] hover:text-white font-normal cursor-pointer  hover:underline"
               >
-                <Link to={item.href} onClick={scrollToTop}>{item.name}</Link>
+                <Link to={item.href} onClick={scrollToTop} title={item.name}>{item.name}</Link>
               </li>
             ))}
           </ul>
@@ -97,7 +101,7 @@ const Footer = () => {
         {/* Footer contact section*/}
       </div>
       <div className="flex flex-col justify-center items-center gap-2 sm:items-start mt-8">
-        <h5 className="text-white font-bold text-[1.1rem]">Contact</h5>
+        <p className="text-white font-bold text-[1.1rem]">Contact</p>
         <a
           className="text-[#ddd] font-normal text-[.98rem] mb-3"
           href="mailto:nacosbowen@gmail.com"
@@ -110,6 +114,7 @@ const Footer = () => {
           {socialLinks.map((linkItem) => (
             <a
               href={linkItem.link}
+              title={linkItem.name}
               target="_blank"
               rel="noreferrer"
               className="text-xl p-2 md:p-3 bg-white rounded-full"
