@@ -1,6 +1,6 @@
 // /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import logo from "../../../src/public/images/navbar/NACOS LOGO.png";
+import logo from "../../../src/public/images/navbar/NACOS LOGO.svg";
 import arrowdown from "../../../src/public/icons/arrowdown.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
