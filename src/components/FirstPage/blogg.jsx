@@ -57,7 +57,7 @@ const BLOG = ({ header, link, blogList }) => {
                 <p className="text-[20px] font-semibold font-[Poppins] text-sm mb-2 text-darkorange">
                   {formatDate(blogItem.date)}
                 </p>
-                <h2 className="text-[22px] md:text-[24px] font-semibold font-[Poppins] mb-2 line-clamp-2">
+                <h2 className="text-[22px] md:text-[24px] text-darkblue font-semibold font-[Poppins] mb-2 line-clamp-2">
                   {blogItem.headerText}
                 </h2>
                 <p className="text-[15px] md:text-[16px] font-normal font-[Poppins] mb-2 line-clamp-4 text-[#6B6B6B]">
@@ -69,7 +69,7 @@ const BLOG = ({ header, link, blogList }) => {
                 className="flex items-center gap-1 w-fit mt-auto hover:scale-[.98] active:scale-[.98] transition-all duration-100 ease-linear"
                 onClick={scrollToTop}
               >
-                <p className="text-[0.8rem] md:text-[1rem] font-normal leading-[21px] sm:leading-[3rem] sm:tracking-tight hover:text-darkorange">
+                <p className="text-[0.8rem] md:text-[1rem] font-normal leading-[21px] sm:leading-[3rem] sm:tracking-tight text-darkblue hover:text-darkorange">
                   Continue Reading
                 </p>
                 <img src={arrow} alt="arrow" />
