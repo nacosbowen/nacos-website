@@ -11,7 +11,7 @@ const Footer = () => {
     title: "About Us",
     items: [
       { name: "Home", href: "/" },
-      { name: "Bowen Nacos", href: "/about" },
+      { name: "NACOS Bowen", href: "/about" },
       { name: "Executives", href: "/executives" },
       { name: "Level Advisers", href: "/level-advisers" },
     ],
@@ -50,7 +50,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col justify-between items-center sm:items-start bg-darkorange py-4 md:px-[2.5rem] md:pt-8 md:pb-4 px-4 z-10">
+    <div className="w-full flex flex-col justify-between items-center sm:items-start bg-gradient-to-tl from-[#0c1a3e] via-[#25355e] to-[#0c1a3e] shadow-lg py-4 md:px-[2.5rem] md:pt-8 md:pb-4 px-4 z-10">
       <div className="w-full flex flex-col sm:flex-row flex-wrap gap-8 justify-between items-center sm:items-start sm:gap-16">
         {/* Footer Logo */}
         <div className="w-max h-fit min-w-[90px] flex flex-col justify-center items-center p-3 sm:p-5 bg-white rounded-2xl cursor-pointer">
@@ -134,8 +134,8 @@ const Footer = () => {
 
       <div className="w-full flex justify-center items-center">
         <p className="text-white text-[8px] font-normal text-center sm:text-[14px] md:text-[16px] lg:text-[18px]">
-          NACOS BOWEN is a registered trademark of Bowen University. &copy;
-          2021-{new Date().getFullYear()}
+          &copy;{' '}
+          {new Date().getFullYear()} NACOS BOWEN
         </p>
       </div>
     </div>

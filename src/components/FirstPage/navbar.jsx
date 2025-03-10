@@ -1,98 +1,49 @@
 // /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../../src/public/images/navbar/NACOS LOGO.svg";
 import arrowdown from "../../../src/public/icons/arrowdown.svg";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [showAbout, setShowAbout] = useState(false);
   const [showMore, setShowMore] = useState(false);
   const [showMobile, setShowMobile] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleAbout = () => {
-    setShowAbout(!showAbout);
-  };
-  const toggleMore = () => {
-    setShowMore(!showMore);
-  };
-
-  const togglenav = () => {
-    setShowMobile(!showMobile);
-  };
+  const toggleAbout = () => setShowAbout(!showAbout);
+  const toggleMore = () => setShowMore(!showMore);
+  const togglenav = () => setShowMobile(!showMobile);
 
   useEffect(() => {
-    // eslint-disable-  next-line @typescript-eslint/no-explicit-any
-    const handleOutsideClick = (event) => {
-      const dropdownElement = document.querySelectorAll(".About");
-      dropdownElement.forEach((el) => {
-        if (showAbout && el && !el.contains(event.target)) {
-          setShowAbout(false);
-        }
-      });
+    const handleScroll = () => {
+      const navbarHeight = 80; // Adjust if your navbar's height changes
+      if (window.scrollY > navbarHeight) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
     };
 
-    document.addEventListener("mousedown", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [showAbout]);
-
-  useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const handleOutsideClick = (event) => {
-      const dropdownElement = document.querySelectorAll(".More");
-      dropdownElement.forEach((el) => {
-        if (showMore && el && !el.contains(event.target)) {
-          setShowMore(false);
-        }
-      });
-    };
-
-    document.addEventListener("mousedown", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [showMore]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
-    {
-      name: "Home",
-      link: "/"
-    },
-    {
-      name: "NACOS Bowen",
-      link: "/about"
-    },
-    {
-      name: "Executives",
-      link: "/executives"
-    },
-    {
-      name: "Advisers and Coordinators",
-      link: "/level-advisers"
-    },
-    {
-      name: "Blogs",
-      link: "/blogs"
-    },
-    {
-      name: "Past Questions",
-      link: "/pastQuestions"
-    },
-    {
-      name: "Events",
-      link: "/events"
-    }
-  ]
+    { name: "Home", link: "/" },
+    { name: "NACOS Bowen", link: "/about" },
+    { name: "Executives", link: "/executives" },
+    { name: "Advisers and Coordinators", link: "/level-advisers" },
+    { name: "Blogs", link: "/blogs" },
+    { name: "Past Questions", link: "/pastQuestions" },
+    { name: "Events", link: "/events" },
+  ];
 
   return (
-    <div>
-      <div className="flex px-2 py-2 lg:px-[4rem] lg:py-4 flex-row justify-between items-center relative shadow-lg shadow-black-500/50 ">
+    <div
+      className={`w-full bg-white z-50 transition-all duration-300 ${isScrolled ? "fixed top-0 shadow-lg" : "relative"}`}
+    >
+      <div className="flex px-2 py-2 lg:px-[4rem] lg:py-4 flex-row justify-between items-center shadow-black-500/50 relative">
         <div>
           <Link to={"/"}>
             <img src={logo} alt="logo" />
@@ -111,23 +62,21 @@ const Navbar = () => {
             </li>
             <li>
               <div
-                className="flex items-center gap-2 relative  About"
+                className="flex items-center gap-2 relative About"
                 onClick={toggleAbout}
               >
                 <div className="flex items-center cursor-pointer gap-2">
                   <button
-                    className="font-Poppins text-base font-medium text-navdark
-                  cursor-pointer"
+                    className="font-Poppins text-base font-medium text-navdark cursor-pointer"
                     href="/about"
                   >
                     About Us
                   </button>
-
                   <img src={arrowdown} alt="" />
                 </div>
 
                 {showAbout && (
-                  <div className="flex justify-start items-start bg-[white] gap-[0.9rem] flex-col w-[200%] rounded-[0.5rem] pr-0  px-4 py-4 absolute shadow-xl top-[100%] ">
+                  <div className="flex justify-start items-start bg-[white] gap-[0.9rem] flex-col w-[200%] rounded-[0.5rem] pr-0 px-4 py-4 absolute shadow-xl top-[100%]">
                     <Link to={"/about"} className="text-navDrop ">
                       NACOS Bowen
                     </Link>
@@ -144,15 +93,13 @@ const Navbar = () => {
             <li>
               <div className="flex items-center gap-2 relative More">
                 <div className="flex items-center gap-2" onClick={toggleMore}>
-                  <button
-                    className="font-Poppins text-base font-medium text-navdark"
-                  >
+                  <button className="font-Poppins text-base font-medium text-navdark">
                     More
                   </button>
                   <img src={arrowdown} alt="" />
                 </div>
                 {showMore && (
-                  <div className="flex justify-start items-start bg-[white] gap-[0.9rem] flex-col w-[250%] rounded-[0.5rem] pr-0  px-4 py-4 absolute shadow-xl top-[100%] right-[-4rem]">
+                  <div className="flex justify-start items-start bg-[white] gap-[0.9rem] flex-col w-[250%] rounded-[0.5rem] pr-0 px-4 py-4 absolute shadow-xl top-[100%] right-[-4rem]">
                     <Link to={"/blogs"} className="text-navDrop ">
                       Blogs
                     </Link>
@@ -163,14 +110,6 @@ const Navbar = () => {
                 )}
               </div>
             </li>
-            {/* <li>
-              <Link
-                className="font-Poppins text-base font-medium text-navdark"
-                to={"/Events"}
-              >
-                Events
-              </Link>
-            </li> */}
           </ul>
         </div>
         <button onClick={togglenav} className="lg:hidden flex cursor-pointer">
@@ -181,7 +120,7 @@ const Navbar = () => {
           )}
         </button>
 
-        {showMobile ? (
+        {showMobile && (
           <div className="px-2 py-2 lg:px-[4rem] lg:py-4 h-[100vh] fixed top-0 left-0 w-full lg:hidden block items-center bg-[white] z-40">
             <div className="w-fit">
               <Link to={"/"}>
@@ -192,20 +131,16 @@ const Navbar = () => {
             <div className="w-full flex flex-col sm:w-[100%] gap-[3rem] absolute top-[60px]">
               <ul className="flex flex-col p-3 lg:hidden gap-[1rem] relative">
                 <hr className="w-full" />
-                {
-                  navLinks.map((linkItem) => (
-                    <li key={linkItem.name}>
-                      <Link to={linkItem.link} className="text-black text-lg">
-                        {linkItem.name}
-                      </Link>
-                    </li>
-                  ))
-                }
+                {navLinks.map((linkItem) => (
+                  <li key={linkItem.name}>
+                    <Link to={linkItem.link} className="text-black text-lg">
+                      {linkItem.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
-        ) : (
-          ""
         )}
       </div>
     </div>

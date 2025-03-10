@@ -57,14 +57,16 @@ const Countdown = () => {
   );
 };
 
-const CountdownItem = ({ num, text }) => {
-  if (num < 0) {
-    return (
-      <div className="flex gap-10">
-        <h1>Countdown completed</h1>
-      </div>
-    );
-  }
+const CountdownItem = ({ number, text }) => {
+  // if (num < 0) {
+  //   return (
+  //     <div className="flex gap-10">
+  //       <h1>Countdown completed</h1>
+  //     </div>
+  //   );
+  // }
+  const num = number < 0 ? "0" : number;
+  
   return (
     <div className="font-mono w-1/4 h-24 md:h-36 flex flex-col gap-1 md:gap-2 items-center justify-center border-r-[1px] last-of-type:border-r-0 border-slate-200">
       <div className="w-full text-center relative overflow-hidden">

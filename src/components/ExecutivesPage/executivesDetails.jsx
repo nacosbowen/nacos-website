@@ -40,7 +40,7 @@ const ExecutivesDetails = () => {
             {` ${executiveYear}/${executiveYear + 1} `}Academic session
           </p>
         </div>
-        <div className="grid mt-8 md:mt-16 md:grid-cols-3 grid-cols-2 max-[375px]:grid-cols-1 gap-x-3 gap-y-[53px] lg:gap-y-[100px] max-w-[1550px] mx-auto px-2">
+        {excos.length <= 0 ? <p className="text-xl text-center my-20 font-bold">Coming soon...</p> :<div className="grid mt-8 md:mt-16 md:grid-cols-3 grid-cols-2 max-[375px]:grid-cols-1 gap-x-3 gap-y-[53px] lg:gap-y-[100px] max-w-[1550px] mx-auto px-2">
           {excos.map((excos, i) => (
             <motion.div
               key={i}
@@ -117,53 +117,10 @@ const ExecutivesDetails = () => {
                   </motion.a>}
                 </div>
               </div>
-              {/* <div className="flex justify-center ">
-                <img
-                  className="rounded-sm flex-grow h-[300px] object-cover"
-                  src={excos?.url}
-                  width="200px"
-                  alt={excos?.fullName}
-                />
-              </div>
-              <h1 className="mt-10 md:text-[1.5rem] text-base lg:text-[2rem] font-bold">
-                {excos?.fullName}
-              </h1>
-              <p className="text-[0.875rem] md:text-[1.2rem] lg:text-[1.5rem] font-medium">
-                {excos?.position}
-              </p>
-              <div className="flex flex-row gap-5 justify-center">
-                {
-                  <a href={`mailto:${excos?.instagram}`}>
-                    <FontAwesomeIcon
-                      className="cursor-pointer"
-                      icon={faInstagram}
-                      size="2xl"
-                    />
-                  </a>
-                }
 
-                {
-                  <a href={excos?.linkedin} target="blank">
-                    <FontAwesomeIcon
-                      className="cursor-pointer"
-                      icon={faLinkedin}
-                      size="2xl"
-                    />
-                  </a>
-                }
-                {
-                  <a target="blank" href={excos?.twitter}>
-                    <FontAwesomeIcon
-                      className="cursor-pointer"
-                      icon={faXTwitter}
-                      size="2xl"
-                    />
-                  </a>
-                }
-              </div> */}
             </motion.div>
           ))}
-        </div>
+        </div>}
       </>
     </div>
   );

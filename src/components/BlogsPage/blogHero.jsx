@@ -27,7 +27,7 @@ const BlogHero = () => {
         <form className="relative w-full md:w-auto flex flex-col sm:flex-row items-center">
           <div className="w-full sm:w-auto flex justify-center items-center bg-[--white] rounded-full px-1 mb-10">
             <input
-              type="text"
+              type="email"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               className="w-full sm:max-w-md placeholder:text-base outline-none text-base font-normal leading-normal bg-white p-3 rounded-full"

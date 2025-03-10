@@ -1,4 +1,4 @@
-import profile from "../../public/images/advisers/profileImage.jpg";
+import profile from "../../public/images/advisers/Avatar.png";
 const authorities = [
   {
     department: "Computer Science",

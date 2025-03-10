@@ -26,7 +26,7 @@ const Events = () => {
       <OtherEvents />
       <EventReview />
 
-      <Internet />
+      {/* <Internet /> */}
       <Footer />
     </div>
   );

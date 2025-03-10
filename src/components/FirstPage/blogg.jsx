@@ -37,7 +37,7 @@ const BLOG = ({ header, link, blogList }) => {
 
   return (
     <div className="md:px-[3rem] py-6 px-6 lg:px-[2rem] box-border">
-      <h1 className="text-black leading-[150%] text-center font-semibold md:mb-[3rem] mb-4 text-[2rem] ">
+      <h1 className="text-darkorange leading-[150%] text-center font-semibold md:mb-[3rem] mb-4 text-[2rem] ">
         {header}
       </h1>
       <div className="grid gap-[2rem] grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 md:gap-[1.5rem]">
@@ -54,7 +54,7 @@ const BLOG = ({ header, link, blogList }) => {
 
             <div className="p-6 flex flex-col justify-between min-h-[18rem]" >
               <div>
-                <p className="text-[20px] font-semibold font-[Poppins] text-sm mb-2">
+                <p className="text-[20px] font-semibold font-[Poppins] text-sm mb-2 text-darkorange">
                   {formatDate(blogItem.date)}
                 </p>
                 <h2 className="text-[22px] md:text-[24px] font-semibold font-[Poppins] mb-2 line-clamp-2">
@@ -69,7 +69,7 @@ const BLOG = ({ header, link, blogList }) => {
                 className="flex items-center gap-1 w-fit mt-auto hover:scale-[.98] active:scale-[.98] transition-all duration-100 ease-linear"
                 onClick={scrollToTop}
               >
-                <p className="text-[0.8rem] md:text-[1rem] font-normal leading-[21px] sm:leading-[3rem] sm:tracking-tight">
+                <p className="text-[0.8rem] md:text-[1rem] font-normal leading-[21px] sm:leading-[3rem] sm:tracking-tight hover:text-darkorange">
                   Continue Reading
                 </p>
                 <img src={arrow} alt="arrow" />

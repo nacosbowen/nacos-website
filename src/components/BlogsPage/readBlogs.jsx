@@ -25,14 +25,14 @@ const ReadBlogs = () => {
 
   return (
     //
-    <div className="bg-grey px-8  md:px-[3rem] py-2 lg:px-[4rem] ">
+    <div className="bg-grey px-8  md:px-[3rem] py-2 lg:px-[4rem]">
       {blogArray?.map((blg, key) => (
         <div key={blg._id}>
           <div className="all-blogs">
             <div className="mt-10">
-              <h3 className="font-medium text-[1.2rem] text-center sm:text-[1.8rem] leading-normal">
+              <h3 className="font-medium text-[1.2rem] text-center text-darkorange sm:text-[1.8rem] leading-normal">
                 BLOG OF
-                <span className="bg-[--grey2] rounded-2xl text-[1.2rem] sm:text-[1.7rem] ml-2 py-1 sm:py-2 px-2 sm:px-3 font-bold">
+                <span className="bg-white shadow-lg rounded-2xl text-[1.4rem] text-darkblue sm:text-[1.7rem] ml-2 py-1 sm:py-2 px-2 sm:px-3 font-bold">
                   THE WEEK
                 </span>
               </h3>

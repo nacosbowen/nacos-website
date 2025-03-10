@@ -31,7 +31,7 @@ const Whoweare = () => {
             return <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`px-1 py-3 w-[1fr] font-bold h-full text-md ${activeTab === index ? "bg-darkorange text-white" : ""}`}
+              className={`px-1 py-3 w-[1fr] font-bold h-full text-md text-darkblue ${activeTab === index ? "bg-darkorange text-white" : ""}`}
             >
               {item.label}
             </button>
@@ -50,7 +50,7 @@ const Whoweare = () => {
                 className="max-w-[1000px] mx-auto"
                 
               >
-                <h1 className="text-dark text-[1.8rem]  font-semibold leading-[-0.057rem] text-left capitalize ">
+                <h1 className="text-darkblue text-[1.8rem]  font-semibold leading-[-0.057rem] text-left capitalize whoweare-header">
                   {item.header}
                 </h1>
                 <p className="text-dark text-left text-base sm:text-[16px] font-normal leading-[217%] lg:text-[16px]">
