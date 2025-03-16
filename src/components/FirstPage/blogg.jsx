@@ -14,8 +14,8 @@ const formatDate = (dateString) => {
     day: "numeric",
   }).format(date);
 };
-const BLOG = ({ header, link, blogList }) => {
-  const { allBlogs } = useNacos();
+const BLOG = ({ header, link, blogList, headerDivider = false }) => {
+  const { allBlogs, isLoading } = useNacos();
 
   const blog = blogList ? blogList : allBlogs.slice(0, 3).map((item) => ({
     ...item,
@@ -25,22 +25,17 @@ const BLOG = ({ header, link, blogList }) => {
         : item.bodyText,
   }));
 
-  if (!allBlogs)
-    return (
-      <div>
-        <h1 className="text-black leading-[150%] text-center font-semibold md:mb-[3rem] mb-4 text-[2rem] md:text-[3rem]">
-          Blog
-        </h1>
-        <h1>No blogs!</h1>
-      </div>
-    );
+  if (isLoading)
+    return <p className="animate-pulse">Loading blogs...</p>;
 
   return (
     <div className="md:px-[3rem] py-6 px-6 lg:px-[2rem] box-border">
-      <h1 className="text-darkorange leading-[150%] text-center font-semibold md:mb-[3rem] mb-4 text-[2rem] ">
+      <h1 className={`text-darkorange leading-[150%] text-center font-semibold md:mb-[3rem] mb-4 text-[2rem] ${headerDivider ? 'blog-list-header' : ''}`}>
         {header}
       </h1>
-      <div className="grid gap-[2rem] grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 md:gap-[1.5rem]">
+      {!blog.length ? <p className="text-center text-[1.4rem] text-darkblue animate-pulse py-20">
+          No blogs available!
+        </p> : <div className="grid gap-[2rem] grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 md:gap-[1.5rem]">
         {blog.map((blogItem, i) => (
           <FloatInAnimation
             key={i}
@@ -77,7 +72,7 @@ const BLOG = ({ header, link, blogList }) => {
             </div>
           </FloatInAnimation>
         ))}
-      </div>
+      </div>}
       {link && <div className="flex sm:justify-end justify-center items-center mt-6 sm:items-end mb-6" onClick={scrollToTop}>
         <Link to={link}>
           <button className="flex flex-row items-center gap-2 rounded-sm bg-white px-4 py-2 border border-white border-solid hover:translate-x-1 active:scale-[.98] transition-all duration-100 ease-linear text-dark hover:text-darkorange">

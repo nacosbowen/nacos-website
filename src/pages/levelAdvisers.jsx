@@ -15,7 +15,7 @@ const LevelAdvisers = () => {
       <Navbar />
       <div className="max-h-full">
         <div className="exam h-[50vh] max-w-full flex flex-col items-center justify-center ">
-          <h1 className="sm:text-[2rem] text-[1.5rem] md:text-[3rem] lg:text-[4rem] font-bold text-center  text-white  leading-[130%] sm:leading-[150%]">
+          <h1 className="sm:text-[2rem] text-[1.5rem] md:text-[3rem] lg:text-[4rem] font-bold text-center  text-white leading-[130%] sm:leading-[150%]">
             Advisers & Coordinators
           </h1>
           <p className=" text-white sm:text-[1.2rem] text-[0.875rem] sm:w-fit w-2/4 max-[450px]:w-[90%] md:text-[1.5rem] font-normal  text-center leading-[150%] sm:leading-[217%] max-w-[61rem] max-h-[7rem]">
@@ -23,7 +23,7 @@ const LevelAdvisers = () => {
           </p>
         </div>
       </div>
-      <div className="mx-10 w-[90%] lg:mt-[92px] mt-[60px] mb-[20px] flex flex-col gap-10 lg:gap-28">
+      <div className="mx-5 w-[90%] lg:mt-[92px] lg:mx-10 mt-[60px] mb-[20px] flex flex-col gap-10 lg:gap-28">
         {/* <Staff title="Level Advisers" data={levelAdvisers} /> */}
         <Staff data={authorities} />
       </div>

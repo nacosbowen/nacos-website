@@ -45,16 +45,12 @@ const blogDesc = () => {
     <div>
       <Navbar />
       <div className='p-8'>
-        <GoBackButton>
-          <IoChevronBackCircleOutline className='text-3xl hover:scale-95 active:scale-95' />
-        </GoBackButton>
-        <Divider/>
+        <Divider/> 
         <BlogPage blog={blog} />
-
-        <Divider/>
+        {/* <Divider/> */}
       </div>
       
-      <BLOG header="More Blog Posts" blogList={otherBlogArray} />
+      <BLOG header="More Blog Posts" headerDivider={true} blogList={otherBlogArray} />
       
       <div className='mx-6 my-5'>
       <GoBackButton>
@@ -68,4 +64,4 @@ const blogDesc = () => {
   )
 }
 
-export default blogDesc
+export default blogDesc;

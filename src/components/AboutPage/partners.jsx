@@ -8,7 +8,14 @@ import google from "../../public/images/partners/google.svg";
 import SCA from "../../public/images/partners/SCA.svg";
 
 const Partner = () => {
-  const images = [techstart, DSN, cicso, polygon, google, SCA];
+  const images = [
+    { name: 'techstart', image: techstart },
+    { name: 'DSN', image: DSN },
+    { name: 'cisco', image: cicso },
+    { name: 'polygon', image: polygon },
+    { name: 'google', image: google },
+    { name: 'she code africa', image: SCA },
+  ];
   
   return (
     <div className="py-[20px]">
@@ -17,10 +24,9 @@ const Partner = () => {
         {images.map((img, i) => (
           <div
             key={i}
-            className="mx-[30px] md:mx-[60px]"
+            className="mx-[30px] md:mx-[60px] h-10 my-4"
           >
-
-            <img className="w-[80%] sm:w-fit" key={i} src={img} alt={img} />
+            <img className="w-[80%] h-full sm:w-fit" key={i} src={img.image} alt={img.name} />
           </div>
         ))}
       </Marquee>
