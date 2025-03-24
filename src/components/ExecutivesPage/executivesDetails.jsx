@@ -6,7 +6,6 @@ import linkedin from "./linkedin.svg";
 import { motion } from "motion/react";
 import ExecutivesHero from "./ExecutiveHero";
 import FloatInAnimation from "../../ui/FloatInAnimation";
-import Oshafi from '../../../public/Oshafi.jpg'
 
 const executiveYear = 2024;
 
@@ -15,7 +14,7 @@ const ExecutivesDetails = () => {
 
   const textExcos = [
     {
-      url: Oshafi,
+      // url: Oshafi,
       fullName: 'Omotiafe David Aregbeyen',
       position: 'President',
       instagram: 'https://instagram.com/nacosbowen',
@@ -57,8 +56,6 @@ const ExecutivesDetails = () => {
     return (indexA === -1 ? 1000 : indexA) - (indexB === -1 ? 24 : indexB);
   });
 
-  console.log(sortedExcos);
-
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -81,7 +78,7 @@ const ExecutivesDetails = () => {
             </p>
             <div className="grid lg:grid-cols-4 mt-8 md:mt-16 md:grid-cols-3 grid-cols-2 max-[480px]:grid-cols-1 gap-8">
               {sortedExcos?.map((executive, i) => (
-                <FloatInAnimation key={i} delay={i * 0.2}>
+                <FloatInAnimation key={i} delay={0.2}>
                   <div
                     className={`relative w-full  aspect-square rounded-2xl bg-gray-200 overflow-hidden ${
                       !executive.url ? "animate-pulse" : ""
@@ -89,7 +86,7 @@ const ExecutivesDetails = () => {
                   >
                     <img
                       src={executive?.url}
-                      className="w-full h-full object-cover object-top executive-image"
+                      className="w-full h-full object-cover object-center executive-image"
                       alt={executive?.fullName}
                     />
                     <div className={`absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100 focus:opacity-100 transition duration-300 ease-in-out bg-[#00000040] backdrop-filter backdrop-blur-md rounded-2xl`}
