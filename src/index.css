@@ -69,7 +69,7 @@ code {
 }
 
 .home-about-container, .home-blog-container, .level-advisers-container{
-  background-image: url('./polygon-scatter-1.svg')
+  background-image: url('/polygon-scatter-1.svg')
 }
 
 .level-advisers-container{
@@ -81,13 +81,13 @@ code {
 }
 
 .whoweare-container{
-  background-image: url('./blob-scatter.svg');
+  background-image: url('/blob-scatter.svg');
   background-size: contain;
 }
 
 .executiveHero {
   position: relative;
-  background-image: url('./Executive-Table.jpg');
+  background-image: url('/Executive-Table.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
