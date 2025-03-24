@@ -5,6 +5,7 @@ import ExecutivesDetails from "../components/ExecutivesPage/executivesDetails";
 import Internet from "../components/AboutPage/partners.jsx";
 import Footer from "../components/FirstPage/footer.jsx";
 import ScrollToTop from "../ui/ScrollToTop.jsx";
+import ExecutivesHero from "../components/ExecutivesPage/ExecutiveHero.jsx";
 
 const NacosExecutives = () => {
   useEffect(() => {
@@ -14,6 +15,7 @@ const NacosExecutives = () => {
   return (
     <div>
       <Navbar />
+      <ExecutivesHero />
       <ExecutivesDetails />
       <Internet />
       <ScrollToTop/>

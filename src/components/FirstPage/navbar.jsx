@@ -86,7 +86,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className={`w-full bg-white z-50 transition-all duration-300 shadow-md ${ "fixed"}`}>
+    <div className={`w-full bg-white z-[1000] transition-all duration-300 shadow-md ${ "fixed"}`}>
       <div className="flex px-4 py-3 lg:px-10 lg:py-4 justify-between items-center relative">
         {/* Logo */}
         <Link to={"/"}>

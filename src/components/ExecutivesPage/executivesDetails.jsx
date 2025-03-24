@@ -3,8 +3,6 @@ import { useNacos } from "../../contexts/nacosContext";
 import Loader from "../loader/Loader";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
-import { motion } from "motion/react";
-import ExecutivesHero from "./ExecutiveHero";
 import FloatInAnimation from "../../ui/FloatInAnimation";
 
 const executiveYear = 2024;
@@ -15,13 +13,13 @@ const ExecutivesDetails = () => {
   const textExcos = [
     {
       // url: Oshafi,
-      fullName: 'Omotiafe David Aregbeyen',
-      position: 'President',
-      instagram: 'https://instagram.com/nacosbowen',
-      twitter: 'https://instagram.com/nacosbowen',
-      linkedIn: 'https://instagram.com/nacosbowen',
-    }
-  ]
+      fullName: "Omotiafe David Aregbeyen",
+      position: "President",
+      instagram: "https://instagram.com/nacosbowen",
+      twitter: "https://instagram.com/nacosbowen",
+      linkedIn: "https://instagram.com/nacosbowen",
+    },
+  ];
 
   const positionOrder = [
     "President",
@@ -48,18 +46,18 @@ const ExecutivesDetails = () => {
     "Assistant Hardware Director",
     "Assistant Software Director",
   ];
-  
+
   const sortedExcos = [...excos].sort((a, b) => {
     const indexA = positionOrder.indexOf(a.position);
     const indexB = positionOrder.indexOf(b.position);
-  
+
     return (indexA === -1 ? 1000 : indexA) - (indexB === -1 ? 24 : indexB);
   });
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <Loader />
+      <div className="flex items-center justify-center h-[20rem] bg-white">
+        <p className="text-xl font-bold animate-pulse">Loading Executives...</p>
       </div>
     );
   }
@@ -67,9 +65,10 @@ const ExecutivesDetails = () => {
   return (
     <div className="mb-10">
       <>
-        <ExecutivesHero />
-        {excos.length <= 0 ? (
-          <p className="text-xl text-center my-20 font-bold">Coming soon...</p>
+        {!isLoading && excos.length <= 0 ? (
+          <div className="flex items-center justify-center h-[20rem] bg-white">
+            <p className="text-xl font-bold animate-pulse">Coming soon!</p>
+          </div>
         ) : (
           <div className="executive md:px-[3rem] py-8 px-8 lg:px-[2rem] bg-gradient-to-tl from-[#0c1a3e] via-[#2b3d6a] to-[#0c1a3e] shadow-lg border-y-4 border-y-white">
             <p className=" text-base sm:text-[1.5rem] text-center text-white py-4">
@@ -89,11 +88,12 @@ const ExecutivesDetails = () => {
                       className="w-full h-full object-cover object-center executive-image"
                       alt={executive?.fullName}
                     />
-                    <div className={`absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100 focus:opacity-100 transition duration-300 ease-in-out bg-[#00000040] backdrop-filter backdrop-blur-md rounded-2xl`}
+                    <div
+                      className={`absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100 focus:opacity-100 transition duration-300 ease-in-out bg-[#00000040] backdrop-filter backdrop-blur-md rounded-2xl`}
                     >
                       <div className="">
                         <div className="flex gap-6 mt-4">
-                          {executive?.instagram.toLowerCase() !== 'nil' && (
+                          {executive?.instagram.toLowerCase() !== "nil" && (
                             <a
                               href={executive?.instagram}
                               target="_blank"
@@ -107,7 +107,7 @@ const ExecutivesDetails = () => {
                               />
                             </a>
                           )}
-                          {executive?.twitter.toLowerCase() !== 'nil' && (
+                          {executive?.twitter.toLowerCase() !== "nil" && (
                             <a
                               href={executive?.twitter}
                               target="_blank"
@@ -117,7 +117,7 @@ const ExecutivesDetails = () => {
                               <FaXTwitter />
                             </a>
                           )}
-                          {executive?.linkedIn.toLowerCase() !== 'nil' && (
+                          {executive?.linkedIn.toLowerCase() !== "nil" && (
                             <a
                               href={executive?.linkedIn}
                               target="_blank"
