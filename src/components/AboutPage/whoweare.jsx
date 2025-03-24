@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import FloatInAnimation from "../../ui/FloatInAnimation";
+import { div } from "framer-motion/client";
 
 const Whoweare = () => {
   const data = [
@@ -24,8 +25,8 @@ const Whoweare = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="sm:px-[3rem] px-[1.5rem] py-8 lg:px-[4rem] lg:py-16 max-w-[1600px] mx-auto">
-      <div className="grid grid-cols-3 items-center justify-around text-center bg-grey mb-10">
+    <div className="sm:px-[3rem] px-[1.5rem] py-8 lg:px-[4rem] lg:py-16 max-w-[1600px] mx-auto ">
+      <div className="grid grid-cols-3 items-center justify-around text-center bg-grey mb-10 z-50">
         {
           data.map((item, index) => {
             return <button
@@ -44,24 +45,25 @@ const Whoweare = () => {
           const paragraphs = item.text.split('\n\n');
 
           return (
-            <FloatInAnimation key={item.label}>
-
-              <div
-                className="max-w-[1000px] mx-auto"
-                
-              >
-                <h1 className="text-darkblue text-[1.8rem]  font-semibold leading-[-0.057rem] text-left capitalize whoweare-header">
-                  {item.header}
-                </h1>
-                <p className="text-dark text-left text-base sm:text-[16px] font-normal leading-[217%] lg:text-[16px]">
-                  {paragraphs[0]}
-                </p>
-                <br />
-                <p className="text-dark text-left text-base sm:text-[16px] font-normal leading-[217%] lg:text-[16px]">
-                  {paragraphs[1]}
-                </p>
-              </div>
-            </FloatInAnimation>
+            <div className="">
+              <FloatInAnimation key={item.label}>
+                <div
+                  className="max-w-[1000px] mx-auto "
+                  
+                >
+                  <h1 className="text-darkblue text-[1.8rem]  font-semibold leading-[-0.057rem] text-left capitalize whoweare-header">
+                    {item.header}
+                  </h1>
+                  <p className="text-dark text-left text-base sm:text-[16px] font-normal leading-[217%] lg:text-[16px]">
+                    {paragraphs[0]}
+                  </p>
+                  <br />
+                  <p className="text-dark text-left text-base sm:text-[16px] font-normal leading-[217%] lg:text-[16px]">
+                    {paragraphs[1]}
+                  </p>
+                </div>
+              </FloatInAnimation>
+            </div>
           )
         })
       }

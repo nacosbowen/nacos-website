@@ -37,7 +37,7 @@ const OurDepartments = () => {
   ];
 
   return (
-    <div className="sm:px-[3rem] px-[1.5rem] my-12 lg:px-[4rem] max-w-[1600px] mx-auto">
+    <div className="sm:px-[3rem] px-[1.5rem] py-12 lg:px-[4rem] max-w-[1600px] mx-auto ">
       <h1 className="text-center text-[1.6rem] leading-[72px] font-semibold sm:text-[2rem] mb-[1rem] md:mb-[2.5rem] uppercase text-darkblue department-heading">
         Our Programmes
       </h1>

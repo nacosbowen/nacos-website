@@ -6,11 +6,58 @@ import linkedin from "./linkedin.svg";
 import { motion } from "motion/react";
 import ExecutivesHero from "./ExecutiveHero";
 import FloatInAnimation from "../../ui/FloatInAnimation";
+import Oshafi from '../../../public/Oshafi.jpg'
 
 const executiveYear = 2024;
 
 const ExecutivesDetails = () => {
   const { excos, isLoading } = useNacos();
+
+  const textExcos = [
+    {
+      url: Oshafi,
+      fullName: 'Omotiafe David Aregbeyen',
+      position: 'President',
+      instagram: 'https://instagram.com/nacosbowen',
+      twitter: 'https://instagram.com/nacosbowen',
+      linkedIn: 'https://instagram.com/nacosbowen',
+    }
+  ]
+
+  const positionOrder = [
+    "President",
+    "Vice-President",
+    "General Secretary",
+    "Financial Secretary",
+    "Welfare Director",
+    "Academic Director",
+    "Hardware Director",
+    "Software Director",
+    "Social Director (Male)",
+    "Social Director (Female)",
+    "Sport Director (Male)",
+    "Sport Director (Female)",
+    "Public Relation Officer",
+    "Chief Whip",
+    "Computer Science Commissioner",
+    "Cyber Security Commissioner",
+    "Information Technology Commissioner",
+    "Software Engineering Commissioner",
+    "Assistant General Secretary",
+    "Assistant Welfare Director",
+    "Assistant Academic Director",
+    "Assistant Hardware Director",
+    "Assistant Software Director",
+  ];
+  
+  const sortedExcos = [...excos].sort((a, b) => {
+    const indexA = positionOrder.indexOf(a.position);
+    const indexB = positionOrder.indexOf(b.position);
+  
+    return (indexA === -1 ? 1000 : indexA) - (indexB === -1 ? 24 : indexB);
+  });
+
+  console.log(sortedExcos);
 
   if (isLoading) {
     return (
@@ -33,7 +80,7 @@ const ExecutivesDetails = () => {
               {` ${executiveYear}/${executiveYear + 1} `}Academic Session
             </p>
             <div className="grid lg:grid-cols-4 mt-8 md:mt-16 md:grid-cols-3 grid-cols-2 max-[480px]:grid-cols-1 gap-8">
-              {excos?.map((executive, i) => (
+              {sortedExcos?.map((executive, i) => (
                 <FloatInAnimation key={i} delay={i * 0.2}>
                   <div
                     className={`relative w-full  aspect-square rounded-2xl bg-gray-200 overflow-hidden ${

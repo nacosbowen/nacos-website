@@ -6,9 +6,9 @@ import { scrollToTop } from "../../utils/utils";
 
 const About = () => {
   return (
-    <div className="bg-grey">
-      <div className="py-12 md:px-[3rem] px-4 md:py-16 lg:py-24">
-        <div className="text-center">
+    <div className="bg-grey home-about-container">
+      <div className="py-12 md:px-[3rem] px-4 md:py-16 lg:py-24 z-50">
+        <div className="text-center ">
           {/* About section on mobile screens */}
           <div>
             <h1 className="text-dark text-[2rem] font-semibold leading-[150%] lg:hidden ">
@@ -34,7 +34,7 @@ const About = () => {
 
             {/* Home page about section large screens */}
             <div className="h-[500px] hidden lg:flex gap-[50px] mx-[5em] justify-center items-center">
-              <div className="shadow p-[1rem] flex-1 min-w-[400px]">
+              <div className="shadow p-[1rem] flex-1 min-w-[400px] z-50">
                 <div className="h-full">
                   <img src={about2} alt="nacos bowen" />
                 </div>

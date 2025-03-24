@@ -13,7 +13,40 @@ import FloatInAnimation from "../../ui/FloatInAnimation";
 const Executives = () => {
   const { excos } = useNacos();
 
-  const executives = excos?.slice(0, 4);
+  const positionOrder = [
+    "President",
+    "Vice-President",
+    "General Secretary",
+    "Financial Secretary",
+    "Welfare Director",
+    "Academic Director",
+    "Hardware Director",
+    "Software Director",
+    "Social Director (Male)",
+    "Social Director (Female)",
+    "Sport Director (Male)",
+    "Sport Director (Female)",
+    "Public Relation Officer",
+    "Chief Whip",
+    "Computer Science Commissioner",
+    "Cyber Security Commissioner",
+    "Information Technology Commissioner",
+    "Software Engineering Commissioner",
+    "Assistant General Secretary",
+    "Assistant Welfare Director",
+    "Assistant Academic Director",
+    "Assistant Hardware Director",
+    "Assistant Software Director",
+  ];
+  
+  const sortedExcos = [...excos].sort((a, b) => {
+    const indexA = positionOrder.indexOf(a.position);
+    const indexB = positionOrder.indexOf(b.position);
+  
+    return (indexA === -1 ? 1000 : indexA) - (indexB === -1 ? 24 : indexB);
+  });
+
+  const executives = sortedExcos?.slice(0, 4);
 
   return (
     <div className=" executive md:px-[3rem] py-8 px-6 lg:px-[2rem] bg-gradient-to-tl from-[#0c1a3e] via-[#2b3d6a] to-[#0c1a3e] shadow-lg">

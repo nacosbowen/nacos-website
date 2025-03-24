@@ -26,10 +26,10 @@ const BLOG = ({ header, link, blogList, headerDivider = false }) => {
   }));
 
   if (isLoading)
-    return <p className="animate-pulse">Loading blogs...</p>;
+    return <p className="animate-pulse text-center py-10">Loading blogs...</p>;
 
   return (
-    <div className="md:px-[3rem] py-6 px-6 lg:px-[2rem] box-border">
+    <div className="md:px-[3rem] py-6 px-6 lg:px-[2rem] box-border home-blog-container">
       <h1 className={`text-darkorange leading-[150%] text-center font-semibold md:mb-[3rem] mb-4 text-[2rem] ${headerDivider ? 'blog-list-header' : ''}`}>
         {header}
       </h1>

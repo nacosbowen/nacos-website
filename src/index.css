@@ -51,14 +51,14 @@ code {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Home-10.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Home-8.jpg');
   height: 100vh;
   animation: slider 120s linear infinite;
 }
 
 @keyframes slider {
-  0%, 20% { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/images/Rectangle 2.jpg'); }
-  25%, 45% { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Home-8.jpg'); }
+  0%, 20% { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/images/Home-8.jpg'); }
+  25%, 45% { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Rectangle-2.jpg'); }
   50%, 70% { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Home-10.jpg'); }
   75%, 100% { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Home-7.jpg'); }
 }
@@ -68,10 +68,42 @@ code {
   background-repeat: no-repeat;
 }
 
+.home-about-container, .home-blog-container, .level-advisers-container{
+  background-image: url('./polygon-scatter-1.svg')
+}
+
+.level-advisers-container{
+  background-size: contain;
+}
+
+.home-blog-container{
+  background-size: cover;
+}
+
+.whoweare-container{
+  background-image: url('./blob-scatter.svg');
+  background-size: contain;
+}
+
 .executiveHero {
-  background-image: linear-gradient(rgba(0, 0, 5, 0.5), rgba(0, 0, 5, 0.5)), url('./public/images/Home-Page/Home-6.jpg');
+  position: relative;
+  background-image: url('./Executive-Table.jpg');
   background-repeat: no-repeat;
-  /* border-bottom: 4px solid #fff; */
+  background-size: cover;
+  background-position: center;
+  color: #be2828;
+}
+
+.executiveHero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 5, 0.5); /* Dark overlay */
+  backdrop-filter: blur(3px); /* Apply blur */
+}
+
+.executiveHero h1{
+  z-index: 50;
 }
 
 .nacostext {
@@ -358,9 +390,16 @@ code {
   ol, ul{
     margin-left: 2rem;
   }
+  h2{
+    /* font-weight: bold; */
+    font-size: 2rem;
+    /* color: var(--darkorange); */
+  }
   h3{
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    /* color: var(--darkblue); */
+    /* text-decoration: underline; */
   }
   ol{
     list-style: disc;

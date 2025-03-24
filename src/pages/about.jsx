@@ -17,11 +17,13 @@ const About = () => {
   return (
     <div>
       <Navbar />
-      <Abouthero />
-      <Whoweare />
-      <OurDepartments />
+      <div className="whoweare-container">
+        <Abouthero />
+        <Whoweare />
+        <OurDepartments />
+      </div>
       <Executives />
-      <ScrollToTop/>
+      <ScrollToTop />
       <Internet />
       <Footer />
     </div>

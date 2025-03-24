@@ -26,7 +26,7 @@ function BlogPage({ blog }) {
       <button
         onClick={() => {
           scrollToTop();
-          navigate(-1) || navigate("/blogs");
+          navigate("/blogs");
         }}
         className="flex items-center gap-1"
       >

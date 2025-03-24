@@ -14,7 +14,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div>
+    <div className="min-w-[20rem]">
       <Navbar />
       <BlogHero />
       <ReadBlogs />

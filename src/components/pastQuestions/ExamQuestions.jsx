@@ -13,27 +13,28 @@ const ExamQuestions = ({ filteredExam }) => {
         {filteredExam.map((ex, key) => (
           <div
             key={key}
-            className="w-full px-2 py-4 bg-dark rounded-[8px] flex justify-between items-center gap-5 sm:px-3 sm:py-6 md:px-4 md:py-14"
+            className="w-full px-2 py-4 bg-dark rounded-[8px] flex justify-between items-center gap-5 sm:px-3 sm:py-6 md:px-4 md:py-8"
           >
-            <div className="w-[full] flex justify-start items-center gap-1 sm:gap-4">
-              <img
-                src={exam}
-                alt="exam illustration"
-                className="md:w-[60%] md:h-full sm:w-[40%] h-fit w-[30%]"
-              />
-
-              <div className="w-full flex flex-col justify-start items-start gap-1">
-                <h1 className="font-semibold text-[10px] sm:text-[15px] md:text-[16px] text-[--darkorange]">
+            <div className="flex justify-start items-center gap-1 sm:gap-4">
+              <div className="max-w-20">
+                <img
+                  src={exam}
+                  alt="exam illustration"
+                  className="md:h-full h-fit w-full"
+                />
+              </div>
+              <div className="w-full flex flex-1 flex-col justify-start items-start gap-1">
+                <h4 className="font-semibold text-[10px] sm:text-[15px] md:text-[16px] text-[#cf2d2d]">
                   Course Code: {ex?.courseCode}
-                </h1>
-                <p className="font-semibold text-[10px] sm:text-[15px] md:text-[17px] text-[--white]">
-                  Course Tittle: {ex?.courseTitle}
+                </h4>
+                <p className="font-semibold text-[.65rem] sm:text-[1rem] md:text-[1.2rem] text-[--white]">
+                  {`Course Tittle: ${ex?.courseTitle}`}
                 </p>
               </div>
             </div>
 
             <div className="flex justify-end w-[32%] sm:w-[25%]">
-              <button className="bg-[--darkorange] lg:py-8 md:py-4 p-2 sm:p-2 lg:p-2 xl:p-[2rem] font-semibold sm:text-[10px] md:text-[13px] text-[8px] lg:text-[1rem] text-[--white] rounded-[8px]">
+              <button className="bg-[--darkorange] lg:py-7 md:py-4 p-2 sm:p-2 lg:p-2 xl:p-[2rem] font-semibold sm:text-[10px] md:text-[13px] text-[8px] lg:text-[1rem] text-[--white] rounded-[8px]">
                 <a href={ex?.url}>Download Question</a>
               </button>
             </div>

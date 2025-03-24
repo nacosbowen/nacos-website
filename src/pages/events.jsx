@@ -8,11 +8,15 @@ import OtherEvents from "../components/EventsPage/otherEvents.jsx";
 import EventReview from "../components/EventsPage/eventReviews.jsx";
 import Internet from "../components/AboutPage/partners.jsx";
 import Footer from "../components/FirstPage/footer.jsx";
+import { useNacos } from "../contexts/nacosContext.jsx";
 
 const Events = () => {
   useEffect(() => {
     scrollToTop();
   }, []);
+
+  const {events} = useNacos();
+  console.log(events);
 
   return (
     <div>

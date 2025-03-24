@@ -22,10 +22,10 @@ const Footer = () => {
     items: [
       { name: "Blog", href: "/blogs" },
       { name: "Past Questions", href: "/pastQuestions" },
-      { name: "Events", href: "/events" },
     ],
   };
-
+  // { name: "Events", href: "/events" },
+  
   const socialLinks = [
     {
       name: "TikTok",
@@ -51,9 +51,9 @@ const Footer = () => {
 
   return (
     <div className="w-full flex flex-col justify-between items-center sm:items-start bg-gradient-to-tl from-[#0c1a3e] via-[#25355e] to-[#0c1a3e] shadow-lg py-4 md:px-[2.5rem] md:pt-8 md:pb-4 px-4 z-10">
-      <div className="w-full flex flex-col sm:flex-row flex-wrap gap-8 justify-between items-center sm:items-start sm:gap-16">
+      <div className="w-full flex flex-col sm:flex-row flex-wrap gap-8 justify-between items-start sm:items-start sm:gap-16">
         {/* Footer Logo */}
-        <div className="w-max h-fit min-w-[90px] flex flex-col justify-center items-center p-3 sm:p-5 bg-white rounded-2xl cursor-pointer">
+        {/* <div className="w-max h-fit min-w-[90px] flex flex-col justify-center items-center p-3 sm:p-5 bg-white rounded-2xl cursor-pointer">
           <Link to={"/"}>
             <div className="flex justify-center items-center">
               <img src={nacoslogo} alt="" />
@@ -62,6 +62,19 @@ const Footer = () => {
             <h1 className="text-[20px] md:text-[25px] font-black text-[#A71E1E] uppercase whitespace-nowrap">
               Nacos Bowen
             </h1>
+          </Link>
+        </div> */}
+
+        <div className="w-max h-fit items-center p-3 bg-grey sm:p-5 rounded-md cursor-pointer inset shadow-md">
+          <Link to={"/"} className="flex items-center gap-2">
+            <div className="flex justify-center items-center">
+              <img src={nacoslogo} alt="nacos logo" className="w-[2rem] sm:w-[3rem]" style={{imageRendering: 'crisp-edges'}} />
+              <img src={bowenLogo} alt="bowen logo" className="w-[2.3rem] sm:w-[3.3rem]" style={{imageRendering: 'crisp-edges'}} />
+            </div>
+            
+            <p className="text-[.55rem] sm:text-[.75rem] uppercase text-[#ccc]  whitespace-nowrap">
+              Nigerian Association of Computing Students <br/> Bowen University, Iwo.
+            </p>
           </Link>
         </div>
 

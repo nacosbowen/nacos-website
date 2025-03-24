@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Staff = ({ data }) => {
   return (
-    <div>
+    <div className="level-advisers-container">
       {data.map((authorities, i) => (
         <motion.div
           key={i}
