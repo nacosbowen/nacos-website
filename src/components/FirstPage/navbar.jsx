@@ -82,7 +82,7 @@ const Navbar = () => {
     { title: "Executives", link: "/executives" },
     { title: "Level Advisers", link: "/level-advisers" },
     { title: "Blogs", link: "/blogs" },
-    { title: "Past Questions", link: "/pastQuestions" },
+    { title: "Past Questions", link: "/past-questions" },
   ];
 
   return (
@@ -117,7 +117,7 @@ const Navbar = () => {
               label="More"
               items={[
                 { label: "Blogs", to: "/blogs" },
-                { label: "Past Questions", to: "/pastQuestions" },
+                { label: "Past Questions", to: "/past-questions" },
               ]}
               isActive={activeDropdown === "more"}
               toggle={() => toggleDropdown("more")}

@@ -10,16 +10,16 @@ const executiveYear = 2024;
 const ExecutivesDetails = () => {
   const { excos, isLoading } = useNacos();
 
-  const textExcos = [
-    {
-      // url: Oshafi,
-      fullName: "Omotiafe David Aregbeyen",
-      position: "President",
-      instagram: "https://instagram.com/nacosbowen",
-      twitter: "https://instagram.com/nacosbowen",
-      linkedIn: "https://instagram.com/nacosbowen",
-    },
-  ];
+  // const textExcos = [
+  //   {
+  //     // url: Oshafi,
+  //     fullName: "Omotiafe David Aregbeyen",
+  //     position: "President",
+  //     instagram: "https://instagram.com/nacosbowen",
+  //     twitter: "https://instagram.com/nacosbowen",
+  //     linkedIn: "https://instagram.com/nacosbowen",
+  //   },
+  // ];
 
   const positionOrder = [
     "President",
@@ -35,7 +35,7 @@ const ExecutivesDetails = () => {
     "Sport Director (Male)",
     "Sport Director (Female)",
     "Public Relation Officer",
-    "Chief Whip",
+    "Chief Whip",
     "Computer Science Commissioner",
     "Cyber Security Commissioner",
     "Information Technology Commissioner",
@@ -136,11 +136,11 @@ const ExecutivesDetails = () => {
                     </div>
                   </div>
 
-                  <h1 className="text-[#ddd] text-[1rem] md:text-[1.5rem] text-center font-bold leading-[normal]">
+                  <h1 className="text-[#ddd] text-[1rem] md:text-[1.5rem] text-center font-bold leading-[normal] pt-2">
                     {executive?.fullName}
                   </h1>
 
-                  <p className="text-[#bbb] text-[0.8rem] md:text-[1.25rem] font-medium leading-[normal] text-center">
+                  <p className="text-[#bbb] text-[0.9rem] md:text-[1.25rem] font-medium leading-[normal] text-center">
                     {executive?.position}
                   </p>
                 </FloatInAnimation>

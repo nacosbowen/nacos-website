@@ -25,7 +25,7 @@ function App() {
             <Route path="/executives" element={<NacosExcos />} />
             <Route path="/events" element={<Events />} />
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/pastQuestions" element={<PastQuestions />} />
+            <Route path="/past-questions" element={<PastQuestions />} />
             <Route path="/level-advisers" element={<LevelAdvisers />} />
             <Route path="/blogDesc/:id" element={<BlogDesc/>} />
             <Route path="*" element={<PageNotFound />} />
