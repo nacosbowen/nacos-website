@@ -17,7 +17,7 @@ const formatDate = (dateString) => {
 const BLOG = ({ header, link, blogList, headerDivider = false }) => {
   const { allBlogs, isLoading } = useNacos();
 
-  const blog = blogList ? blogList : allBlogs.slice(0, 3).map((item) => ({
+  const blog = blogList ? blogList : allBlogs.slice(0, 4).map((item) => ({
     ...item,
     truncatedBody:
       item.bodyText.length > 150

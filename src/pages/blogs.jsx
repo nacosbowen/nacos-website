@@ -16,7 +16,7 @@ const Blogs = () => {
 
   return (
     <div className="min-w-[20rem]">
-      <ToastContainer position="top-center" hideProgressBar toastStyle={{maxWidth: '85%', borderRadius: '10px', marginTop: '4.5rem'}} />
+      <ToastContainer position="top-center" hideProgressBar closeButton={false} toastStyle={{maxWidth: '85%', borderRadius: '10px', marginTop: '4.5rem'}} />
       <Navbar />
       <BlogHero />
       <ReadBlogs />
