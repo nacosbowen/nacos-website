@@ -30,7 +30,7 @@ const DropdownMenu = ({ label, items, isActive, toggle }) => (
           <NavLink
             key={index}
             to={item.to}
-            className="block text-navDrop py-2 px-4 hover:bg-grey active:bg-grey text-nowrap"
+            className="block text-navDrop py-2 px-4 hover:bg-grey active:bg-grey text-nowrap even:border-y-2 border-grey"
             onClick={toggle} // Close dropdown when clicking a link
           >
             {item.label}

@@ -40,7 +40,7 @@ const FilterExamQuestions = ({ Dept, setDept, levels, setLevel, semesters, setSe
                 setSelected(option);
                 toggle();
               }}
-              className="block w-full text-left text-dark text-[0.95rem] sm:text-[1rem]  py-3 px-4 hover:bg-grey"
+              className="block w-full text-left text-dark text-[0.95rem] sm:text-[1rem]  py-3 px-4 hover:bg-grey even:border-y-2 border-grey"
             >
               {option}
             </button>
