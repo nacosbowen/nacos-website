@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../src/public/images/navbar/NACOS LOGO.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { scrollToTop } from "../../utils/utils";
 
 /* NavLink Component */
 const NavBarLink = ({ to, label }) => (
@@ -89,7 +90,7 @@ const Navbar = () => {
     <div className={`w-full bg-white z-[1000] transition-all duration-300 shadow-md ${ "fixed"}`}>
       <div className="flex px-4 py-3 lg:px-10 lg:py-4 justify-between items-center relative">
         {/* Logo */}
-        <Link to={"/"}>
+        <Link to={"/"} onClick={scrollToTop}>
           <img src={logo} alt="logo" />
         </Link>
 

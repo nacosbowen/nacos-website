@@ -25,7 +25,7 @@ const Footer = () => {
     ],
   };
   // { name: "Events", href: "/events" },
-  
+
   const socialLinks = [
     {
       name: "TikTok",
@@ -66,14 +66,29 @@ const Footer = () => {
         </div> */}
 
         <div className="w-max h-fit items-center p-3 bg-grey sm:p-5 rounded-md cursor-pointer inset shadow-md">
-          <Link to={"/"} className="flex items-center gap-2">
+          <Link
+            to={"/"}
+            onClick={scrollToTop}
+            className="flex items-center gap-2"
+          >
             <div className="flex justify-center items-center">
-              <img src={nacoslogo} alt="nacos logo" className="w-[2rem] sm:w-[3rem]" style={{imageRendering: 'crisp-edges'}} />
-              <img src={bowenLogo} alt="bowen logo" className="w-[2.3rem] sm:w-[3.3rem]" style={{imageRendering: 'crisp-edges'}} />
+              <img
+                src={nacoslogo}
+                alt="nacos logo"
+                className="w-[2rem] sm:w-[3rem]"
+                style={{ imageRendering: "crisp-edges" }}
+              />
+              <img
+                src={bowenLogo}
+                alt="bowen logo"
+                className="w-[2.3rem] sm:w-[3.3rem]"
+                style={{ imageRendering: "crisp-edges" }}
+              />
             </div>
-            
+
             <p className="text-[.55rem] sm:text-[.75rem] uppercase text-[#ccc]  whitespace-nowrap">
-              Nigerian Association of Computing Students <br/> Bowen University, Iwo.
+              Nigerian Association of Computing Students <br /> Bowen
+              University, Iwo.
             </p>
           </Link>
         </div>
@@ -89,7 +104,7 @@ const Footer = () => {
                 key={index}
                 className="text-[1rem] text-[#ddd] hover:text-white font-normal cursor-pointer hover:underline"
               >
-                <Link to={item.href} className="">
+                <Link to={item.href} className="" onClick={scrollToTop}>
                   {item.name}
                 </Link>
               </li>
@@ -105,7 +120,9 @@ const Footer = () => {
                 key={index}
                 className="text-[1rem] text-[#ddd] hover:text-white font-normal cursor-pointer  hover:underline"
               >
-                <Link to={item.href} onClick={scrollToTop} title={item.name}>{item.name}</Link>
+                <Link to={item.href} onClick={scrollToTop} title={item.name}>
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -147,8 +164,7 @@ const Footer = () => {
 
       <div className="w-full flex justify-center items-center">
         <p className="text-white text-[8px] font-normal text-center sm:text-[14px] md:text-[16px] lg:text-[18px]">
-          &copy;{' '}
-          {new Date().getFullYear()} NACOS BOWEN
+          &copy; {new Date().getFullYear()} NACOS BOWEN
         </p>
       </div>
     </div>
