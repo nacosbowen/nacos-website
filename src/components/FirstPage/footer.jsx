@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import nacoslogo from "../../public/icons/NACOS LOGO 1.svg";
-import bowenLogo from "../../public/icons/BOWEN LOGO 1.svg";
+import nacoslogo from "/NACOS-LOGO-1.png";
+import bowenLogo from "/Bowen-Logo-3.png";
 import { FaXTwitter, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { scrollToTop } from "../../utils/utils";

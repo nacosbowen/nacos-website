@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../../src/public/images/navbar/NACOS LOGO.svg";
+import logo from "/NACOS-LOGO.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { scrollToTop } from "../../utils/utils";
@@ -90,7 +90,7 @@ const Navbar = () => {
     <div className={`w-full bg-white z-[1000] transition-all duration-300 shadow-md ${ "fixed"}`}>
       <div className="flex px-4 py-3 lg:px-10 lg:py-4 justify-between items-center relative">
         {/* Logo */}
-        <Link to={"/"} onClick={scrollToTop}>
+        <Link to={"/"} onClick={scrollToTop} className="w-[7.2em]">
           <img src={logo} alt="logo" />
         </Link>
 
