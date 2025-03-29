@@ -6,8 +6,8 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { scrollToTop } from "../../utils/utils";
 
 /* NavLink Component */
-const NavBarLink = ({ to, label }) => (
-  <NavLink className="font-Poppins text-base font-medium text-navdark" to={to}>
+const NavBarLink = ({ to, label, onClick }) => (
+  <NavLink className="font-Poppins text-base font-medium text-navdark" to={to} onClick={onClick}>
     {label}
   </NavLink>
 );
@@ -96,7 +96,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-12">
-          <NavBarLink to="/" label="Home" />
+          <NavBarLink to="/" label="Home" onClick={scrollToTop} />
 
           {/* About Us Dropdown */}
           <div ref={(el) => (dropdownRefs.current["about"] = el)}>
