@@ -56,19 +56,21 @@ function BlogPage({ blog }) {
         </GoBackButton>
         <Divider />
         <div className="">
-          <div className="md:hidden mx-auto flex justify-center items-center mt-10 mb-3">
+          {/* <div className={`mx-auto flex justify-center items-center mt-10 mb-3 bg-grey ${imageUrl ? "" : "animate-pulse"}`}>
             <img
               className="flex justify-center items-center"
               src={imageUrl}
               alt="blogimage"
             />
-          </div>
+          </div> */}
           <div className="col-span-2">
             {/* Individual blog header */}
             <div className="col-span-1 flex gap-5 w-full items-center">
               {/* <img src={imageUrl} alt="blogimage" className="hidden md:inline-block max-w-[22rem]" /> */}
               <div
-                className="hidden md:inline-block h-[20rem] w-[70%] bg-cover bg-center"
+                className={`hidden md:inline-block h-[20rem] w-[70%] bg-cover bg-center rounded-md bg-grey ${
+                  !imageUrl ? "animate-pulse" : ""
+                }`}
                 style={{ backgroundImage: `url(${imageUrl})` }}
               ></div>
               {/* Individual blog details */}

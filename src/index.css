@@ -160,9 +160,10 @@ code {
 }
 
 .exam {
-  background-image: url("../src/public/images/PQ_background.svg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../src/public/images/PQ_background.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #c4c4c4;
 }
 
 .advisers-hero {
@@ -170,6 +171,7 @@ code {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #c4c4c4;
 }
 
 .currentEvents {

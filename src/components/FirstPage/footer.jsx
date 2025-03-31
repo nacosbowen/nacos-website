@@ -65,11 +65,11 @@ const Footer = () => {
           </Link>
         </div> */}
 
-        <div className="w-max h-fit items-center p-3 bg-grey sm:p-5 rounded-md cursor-pointer inset shadow-md">
+        <button className="w-max h-fit items-center bg-grey rounded-md cursor-pointer inset shadow-md text-left" >
           <Link
             to={"/"}
+            className="flex items-center gap-2 p-3 sm:p-5"
             onClick={scrollToTop}
-            className="flex items-center gap-2"
           >
             <div className="flex justify-center items-center">
               <img
@@ -91,7 +91,7 @@ const Footer = () => {
               University, Iwo.
             </p>
           </Link>
-        </div>
+        </button>
 
         {/* Footer navlinks */}
         <div className="w-[100%] sm:w-[50%] text-left flex flex-wrap justify-between">
