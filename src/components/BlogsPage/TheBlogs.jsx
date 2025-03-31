@@ -34,7 +34,7 @@ const TheBlogs = () => {
               className="shadow-lg rounded-[10px] overflow-hidden bg-white"
             >
               <div
-                className="h-[200px] bg-cover bg-center"
+                className={`h-[200px] bg-cover bg-center bg-grey ${!blogItem.imageUrl ? "animate-pulse" : ""}`}
                 style={{ backgroundImage: `url(${blogItem.imageUrl})` }}
               ></div>
 

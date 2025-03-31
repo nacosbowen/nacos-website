@@ -40,7 +40,7 @@ const ReadBlogs = () => {
               <div className="my-10" key={key}>
                 <div className="max-w-[65rem] mx-auto">
                   <div className="md:hidden">
-                    <div className="mx-auto flex justify-center items-center mt-10 mb-3">
+                    <div className={`mx-auto flex justify-center items-center mt-10 mb-3 ${blg.imageUrl ? "" : "animate-pulse"}`}>
                       <img
                         className="flex justify-center items-center"
                         src={blg?.imageUrl}
