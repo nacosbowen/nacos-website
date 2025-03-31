@@ -79,7 +79,7 @@ const ExecutivesDetails = () => {
               {sortedExcos?.map((executive, i) => (
                 <FloatInAnimation key={i} delay={0.2}>
                   <div
-                    className={`relative w-full  aspect-square rounded-2xl bg-gray-200 overflow-hidden ${
+                    className={`relative w-full aspect-square rounded-2xl bg-grey overflow-hidden ${
                       !executive.url ? "animate-pulse" : ""
                     }`}
                   >
