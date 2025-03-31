@@ -33,20 +33,20 @@ const Staff = ({ data }) => {
               />
               <div>
                 <div>
-                  <strong>Name: </strong>
-                  <span>{authorities.headOfProgram.name}</span>
+                  <strong className="text-darkblue">Name: </strong>
+                  <span className="font-semibold">{authorities.headOfProgram.name}</span>
                 </div>
                 <div>
-                  <strong>Office: </strong>
-                  <span>{authorities.headOfProgram.office}</span>
+                  <strong className="text-darkblue">Office: </strong>
+                  <span className="font-semibold">{authorities.headOfProgram.office}</span>
                 </div>
                 <div>
-                  <strong>Phone: </strong>
-                  <span>{authorities.headOfProgram.phone}</span>
+                  <strong className="text-darkblue">Phone: </strong>
+                  <span className="font-semibold">{authorities.headOfProgram.phone}</span>
                 </div>
                 <div>
-                  <strong>Department: </strong>
-                  <span>{authorities.headOfProgram.department}</span>
+                  <strong className="text-darkblue">Department: </strong>
+                  <span className="font-semibold">{authorities.headOfProgram.department}</span>
                 </div>
               </div>
             </div>
@@ -71,20 +71,20 @@ const Staff = ({ data }) => {
                     />
                     <div>
                       <div>
-                        <strong>Name: </strong>
-                        <span>{advisers.name}</span>
+                        <strong className="text-darkblue">Name: </strong>
+                        <span className="font-semibold">{advisers.name}</span>
                       </div>
                       <div>
-                        <strong>Office: </strong>
-                        <span>{advisers.office}</span>
+                        <strong className="text-darkblue">Office: </strong>
+                        <span className="font-semibold">{advisers.office}</span>
                       </div>
                       <div>
-                        <strong>Level: </strong>
-                        <span>{advisers.level}</span>
+                        <strong className="text-darkblue">Level: </strong>
+                        <span className="font-semibold capitalize">{advisers.level}</span>
                       </div>
                       <div>
-                        <strong>Phone: </strong>
-                        <span>{advisers.phone}</span>
+                        <strong className="text-darkblue">Phone: </strong>
+                        <span className="font-semibold">{advisers.phone}</span>
                       </div>
                     </div>
                   </div>

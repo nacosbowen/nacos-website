@@ -4,6 +4,7 @@ import { useNacos } from "../../contexts/nacosContext";
 import { scrollToTop } from "../../utils/utils";
 import FloatInAnimation from "../../ui/FloatInAnimation";
 import arrow from "../../public/icons/Arrow - Down Circle.svg";
+import avatar from "../../public/images/advisers/Avatar.png";
 
 const Executives = () => {
   const { excos } = useNacos();
@@ -56,18 +57,19 @@ const Executives = () => {
           {sortedExcos.slice(0, visibleExecutives).map((executive, i) => (
             <FloatInAnimation key={i} delay={i * 0.2}>
               <div
-                className={`relative w-full aspect-square rounded-2xl bg-gray-200 overflow-hidden ${!executive.url ? "animate-pulse" : ""}`}
+                className={`relative w-full aspect-square rounded-2xl bg-grey overflow-hidden ${!executive.url ? "animate-pulse" : ""}`}
               >
                 <img
-                  src={executive?.url}
+                  src={executive?.url || avatar}
+                  onError={(e) => (e.target.src = avatar)}
                   className="w-full h-full object-cover transition-opacity duration-300 ease-in-out"
-                  alt={executive?.fullName}
+                  alt={executive?.fullName || "Executive image not available"}
                 />
               </div>
               <h1 className="text-[#ddd] text-[15px] md:text-[20px] lg:text-[25px] text-center font-bold leading-[normal]">
                 {executive?.fullName}
               </h1>
-              <p className="text-[#ddd] text-[0.8rem] md:text-[1.25rem] font-medium leading-[normal] text-center">
+              <p className="text-[#aab] text-[0.8rem] md:text-[1.25rem] font-medium leading-[normal] text-center">
                 {executive?.position}
               </p>
             </FloatInAnimation>

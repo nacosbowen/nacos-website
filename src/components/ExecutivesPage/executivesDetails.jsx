@@ -1,6 +1,6 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { useNacos } from "../../contexts/nacosContext";
-import Loader from "../loader/Loader";
+import avatar from "../../public/images/advisers/Avatar.png";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
 import FloatInAnimation from "../../ui/FloatInAnimation";
@@ -84,7 +84,8 @@ const ExecutivesDetails = () => {
                     }`}
                   >
                     <img
-                      src={executive?.url}
+                      src={executive?.url || avatar}
+                      onError={(e) => (e.target.src = avatar)}
                       className="w-full h-full object-cover object-center executive-image"
                       alt={executive?.fullName}
                     />
@@ -140,7 +141,7 @@ const ExecutivesDetails = () => {
                     {executive?.fullName}
                   </h1>
 
-                  <p className="text-[#bbb] text-[0.9rem] md:text-[1.25rem] font-medium leading-[normal] text-center">
+                  <p className="text-[#aab] text-[0.9rem] md:text-[1.25rem] font-medium leading-[normal] text-center pt-2">
                     {executive?.position}
                   </p>
                 </FloatInAnimation>
