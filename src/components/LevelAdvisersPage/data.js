@@ -3,7 +3,7 @@ const authorities = [
   {
     department: "Computer Science",
     headOfProgram: {
-      name: "Dr Olanloye",
+      name: "Dr. Olanloye",
       office: "Room 101",
       phone: "+2348038196016",
       image: profile,
@@ -13,7 +13,7 @@ const authorities = [
       {
         name: "Mr. Erinfolami",
         office: "Room 101",
-        phone: "+239063630668",
+        phone: "+2349063630668",
         image: profile,
         department: "Computer Science",
         level: "100 level",
@@ -35,7 +35,7 @@ const authorities = [
         level: "300 level",
       },
       {
-        name: "Dr. Justice",
+        name: "Dr. Ozichi",
         office: "Room 101",
         phone: "+2348037799290",
         image: profile,
@@ -47,7 +47,7 @@ const authorities = [
   {
     department: "Cyber Security",
     headOfProgram: {
-      name: "Dr Popoola",
+      name: "Dr. Popoola",
       office: "Room 101",
       image: profile,
       phone: "+234 xxxxxxxxxx",
@@ -91,7 +91,7 @@ const authorities = [
   {
     department: "Information Technology",
     headOfProgram: {
-      name: "Dr G O Atanda",
+      name: "Dr. G O Atanda",
       office: "Room 101",
       phone: "+234 xxxxxxxxxx",
       image: profile,
@@ -99,34 +99,34 @@ const authorities = [
     },
     levelAdviser: [
       {
-        name: "Mrs Oluwadamilare",
+        name: "Ms. Oluwadamilare",
         office: "Room 101",
         phone: "+234xxxxxxxxxx",
-        department: "Computer Science",
+        department: "Information Technology",
         image: profile,
         level: "100 level",
       },
       {
-        name: "Mrs Oluwadamilare",
+        name: "Mr. Falana",
         office: "Room 101",
         phone: "+234xxxxxxxxxx",
-        department: "Computer Science",
+        department: "Information Technology",
         level: "200 level",
         image: profile,
       },
       {
-        name: "Mrs Oluwadamilare",
+        name: "Mr. Falana",
         office: "Room 101",
         phone: "+234xxxxxxxxxx",
-        department: "Computer Science",
+        department: "Information Technology",
         image: profile,
         level: "300 level",
       },
       {
-        name: "Mrs Oluwadamilare",
+        name: "Mr. Erinfolami",
         office: "Room 101",
         phone: "+234xxxxxxxxxx",
-        department: "Computer Science",
+        department: "Information Technology",
         image: profile,
         level: "400 level",
       },
@@ -135,7 +135,7 @@ const authorities = [
   {
     department: "Software Engineering",
     headOfProgram: {
-      name: "Dr Chinemerem",
+      name: "Dr. Umezurike",
       office: "Room 101",
       phone: "+234 xxxxxxxxxx",
       image: profile,
@@ -143,7 +143,7 @@ const authorities = [
     },
     levelAdviser: [
       {
-        name: "Mrs Oluwadamilare",
+        name: "Ms. Oluwadamilare",
         office: "Room 101",
         phone: "+234xxxxxxxxxx",
         image: profile,
@@ -151,7 +151,7 @@ const authorities = [
         level: "100 level",
       },
       {
-        name: "Mrs Oluwadamilare",
+        name: "Mr. Oyebade",
         office: "Room 101",
         phone: "+234xxxxxxxxxx",
         image: profile,
@@ -159,7 +159,7 @@ const authorities = [
         level: "200 level",
       },
       {
-        name: "Mrs Oluwadamilare",
+        name: "Mr. Oyebade",
         office: "Room 101",
         phone: "+234xxxxxxxxxx",
         image: profile,
@@ -167,7 +167,7 @@ const authorities = [
         level: "300 level",
       },
       {
-        name: "Mrs Oluwadamilare",
+        name: "Dr. Ozichi",
         office: "Room 101",
         phone: "+234xxxxxxxxxx",
         image: profile,
