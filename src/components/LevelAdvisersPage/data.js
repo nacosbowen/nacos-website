@@ -13,7 +13,7 @@ const authorities = [
       {
         name: "Mr. Erinfolami",
         office: "Room 101",
-        phone: "+239063630668",
+        phone: "+2349063630668",
         image: profile,
         department: "Computer Science",
         level: "100 level",
