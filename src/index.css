@@ -51,7 +51,7 @@ code {
     monospace;
 }
 
-.hero {
+/* .hero {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,7 +86,7 @@ code {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     var(--hero-image-4);
   }
-}
+} */
 
 .Abouthero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
