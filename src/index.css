@@ -51,13 +51,16 @@ code {
     monospace;
 }
 
-.hero {
+/* .hero {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/images/Home-8.jpg");
   height: 100vh;
+}
+
+.bg-loaded{
   animation: slider 120s linear infinite;
   will-change: background-image;
 }
@@ -83,7 +86,7 @@ code {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     var(--hero-image-4);
   }
-}
+} */
 
 .Abouthero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
