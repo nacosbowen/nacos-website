@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import {motion} from 'framer-motion'
 
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -9,9 +9,33 @@ const Hero = () => {
     typeSpeed: 100,
     deleteSpeed: 100,
   });
+
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    const images = [
+      "/images/Home-8.jpg",
+      "/images/Home-7.jpg",
+      "/images/Home-10.jpg",
+      "/images/Rectangle-2.jpg",
+    ];
+
+    let loadedCount = 0;
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === images.length) {
+          setImagesLoaded(true);
+        }
+      };
+    });
+  }, []);
+
   return (
     <div className="">
-      <div className=" h-full max-w-full hero grid place-items-center">
+      <div className={`hero min-h-screen h-full max-w-full grid place-items-center ${imagesLoaded ? "bg-loaded" : "bg-gray-500"}`}>
         <div className="w-full h-[90vh] grid place-items-center grid-rows-6">
           
           <h1 className="text-center font-bold rounded-[0.625rem] px-[1.1325rem] py-[0.8125rem] my-6 w-fit max-w-[90%] nacostext bg-[#FAB5B5] text-[#ddd] font-Poppins leading-[157.5%] sm:text-.9rem lg:text-[1.3rem] row-span-3">

@@ -58,6 +58,9 @@ code {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/images/Home-8.jpg");
   height: 100vh;
+}
+
+.bg-loaded{
   animation: slider 120s linear infinite;
   will-change: background-image;
 }
