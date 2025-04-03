@@ -32,7 +32,7 @@ const Whoweare = () => {
             return <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`px-1 py-3 w-[1fr] font-bold h-full text-md text-darkblue even:border-x border-darkorange ${activeTab === index ? "bg-darkorange text-white scale-110" : "hover:bg-[#eee] hover:font-bold"}`}
+              className={`px-1 py-3 w-[1fr] font-bold h-full text-md text-darkblue even:border-x-2 border-darkorange ${activeTab === index ? "bg-darkorange text-white scale-110" : "hover:bg-[#eee] hover:font-bold"}`}
             >
               {item.label}
             </button>
