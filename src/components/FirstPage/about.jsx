@@ -1,8 +1,7 @@
 import React from "react";
 import about2 from "../../public/images/Home-Page/nacos-about-us.webp";
-import rightArrow from "../../public/images/Home-Page/weui_arrow-filled.svg";
 import { Link } from "react-router-dom";
-import { scrollToTop } from "../../utils/utils";
+import { BsArrowRight } from "react-icons/bs";
 
 const About = () => {
   return (
@@ -18,19 +17,25 @@ const About = () => {
               <img src={about2} alt="nacos bowen" />
             </div>
             <p className="text-dark md:text-[1.2rem] xl:text-center text-center text-base font-normal leading-[217%]  lg:hidden px-[.5rem] w-fit">
-              The <strong>Nigerian Association of Computing Students (BOWEN Chapter)</strong> is a student body
-              dedicated to fostering academic excellence among computing
-              students in various departments, providing resources and support
-              systems to enhance learning. We are committed to facilitating
-              professional development through skill-building, networking
-              opportunities
+              The{" "}
+              <strong>
+                Nigerian Association of Computing Students (BOWEN Chapter)
+              </strong>{" "}
+              is a student body dedicated to fostering academic excellence among
+              computing students in various departments, providing resources and
+              support systems to enhance learning. We are committed to
+              facilitating professional development through skill-building,
+              networking opportunities
             </p>
-            <Link to={"/about"}>
-              <button className="lg:hidden bg-[#7D1515] flex mx-auto px-2 justify-center items-center rounded-[24px] mt-[22px]">
-                <p className="text-[.9rem] text-[#fff] p-[10px]">Learn More</p>
-                <img src={rightArrow} alt="arrow" />
-              </button>
-            </Link>
+            <button className="lg:hidden mt-[22px]">
+              <Link
+                to={"/about"}
+                className="text-[#fff] bg-[#7D1515] flex mx-auto px-2 justify-center items-center rounded-[24px]"
+              >
+                <p className="text-[.9rem] p-[10px]">Learn More</p>
+                <BsArrowRight />
+              </Link>
+            </button>
 
             {/* Home page about section large screens */}
             <div className="h-[500px] hidden lg:flex gap-[50px] mx-[5em] justify-center items-center">
@@ -44,22 +49,27 @@ const About = () => {
                 {/* <p className="mb-2">Bowen Nacos</p> */}
                 <br />
                 <p className="leading-[250%]">
-                  The <strong>Nigerian Association of Computing Students (BOWEN Chapter)</strong> is a student body dedicated to fostering academic excellence among computing
-                  students in various departments, providing resources and
-                  support systems to enhance learning. We are committed to
-                  facilitating professional development through skill-building,
-                  networking opportunities, and exposure to industry trends. Our
-                  mission extends to building a supportive community, where
-                  students can connect, collaborate, and share experiences.
+                  The{" "}
+                  <strong>
+                    Nigerian Association of Computing Students (BOWEN Chapter)
+                  </strong>{" "}
+                  is a student body dedicated to fostering academic excellence
+                  among computing students in various departments, providing
+                  resources and support systems to enhance learning. We are
+                  committed to facilitating professional development through
+                  skill-building, networking opportunities, and exposure to
+                  industry trends. Our mission extends to building a supportive
+                  community, where students can connect, collaborate, and share
+                  experiences.
                 </p>
                 <br />
                 <br />
                 <Link to={"/about"} className=" mt-4 py-4 ">
-                  <button className="border-2 border-white hover:bg-[#A71E1E] hover:translate-y-[-5px] transition-all ease-linear duration-300">
-                    <p className="text-[.9rem] text-[#fff] p-[10px] uppercase font-bold">
+                  <button className="border-2 border-white hover:bg-[#A71E1E] hover:translate-y-[-5px] transition-all ease-linear duration-300 flex gap-2 items-center p-[10px]">
+                    <p className="text-[.9rem] text-[#fff] uppercase font-bold">
                       Learn More
                     </p>
-                    {/* <img src={rightArrow} alt="" /> */}
+                    <BsArrowRight />
                   </button>
                 </Link>
               </div>

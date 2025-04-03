@@ -63,7 +63,7 @@ const authorities = [
         level: "100 level",
       },
       {
-        name: "Dr. Falana",
+        name: "Mr. Falana",
         office: "Room 101",
         phone: "+2347030506455",
         image: profile,
@@ -101,7 +101,7 @@ const authorities = [
       {
         name: "Ms. Oluwadamilare",
         office: "Room 101",
-        phone: "+234xxxxxxxxxx",
+        phone: "+2348105644352",
         department: "Information Technology",
         image: profile,
         level: "100 level",
@@ -109,7 +109,7 @@ const authorities = [
       {
         name: "Mr. Falana",
         office: "Room 101",
-        phone: "+234xxxxxxxxxx",
+        phone: "+2347030506455",
         department: "Information Technology",
         level: "200 level",
         image: profile,
@@ -117,7 +117,7 @@ const authorities = [
       {
         name: "Mr. Falana",
         office: "Room 101",
-        phone: "+234xxxxxxxxxx",
+        phone: "+2347030506455",
         department: "Information Technology",
         image: profile,
         level: "300 level",
@@ -125,7 +125,7 @@ const authorities = [
       {
         name: "Mr. Erinfolami",
         office: "Room 101",
-        phone: "+234xxxxxxxxxx",
+        phone: "+2349063630668",
         department: "Information Technology",
         image: profile,
         level: "400 level",
@@ -137,7 +137,7 @@ const authorities = [
     headOfProgram: {
       name: "Dr. Umezurike",
       office: "Room 101",
-      phone: "+234 xxxxxxxxxx",
+      phone: "+2348033320364",
       image: profile,
       department: "Software Engineering",
     },
@@ -145,7 +145,7 @@ const authorities = [
       {
         name: "Ms. Oluwadamilare",
         office: "Room 101",
-        phone: "+234xxxxxxxxxx",
+        phone: "+2348105644352",
         image: profile,
         department: "Software Engineering",
         level: "100 level",
@@ -153,7 +153,7 @@ const authorities = [
       {
         name: "Mr. Oyebade",
         office: "Room 101",
-        phone: "+234xxxxxxxxxx",
+        phone: "+2347033303729",
         image: profile,
         department: "Software Engineering",
         level: "200 level",
@@ -161,7 +161,7 @@ const authorities = [
       {
         name: "Mr. Oyebade",
         office: "Room 101",
-        phone: "+234xxxxxxxxxx",
+        phone: "+2347033303729",
         image: profile,
         department: "Software Engineering",
         level: "300 level",
@@ -169,7 +169,7 @@ const authorities = [
       {
         name: "Dr. Ozichi",
         office: "Room 101",
-        phone: "+234xxxxxxxxxx",
+        phone: "+234807799290",
         image: profile,
         department: "Software Engineering",
         level: "400 level",

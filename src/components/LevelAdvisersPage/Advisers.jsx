@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { formatPhoneNumber } from "../../utils/utils";
 
 const Staff = ({ data }) => {
   return (
@@ -42,7 +43,7 @@ const Staff = ({ data }) => {
                 </div>
                 <div>
                   <strong className="text-darkblue">Phone: </strong>
-                  <span className="font-semibold">{authorities.headOfProgram.phone}</span>
+                  <span className="font-semibold">{formatPhoneNumber(authorities.headOfProgram.phone)}</span>
                 </div>
                 <div>
                   <strong className="text-darkblue">Department: </strong>
@@ -84,7 +85,7 @@ const Staff = ({ data }) => {
                       </div>
                       <div>
                         <strong className="text-darkblue">Phone: </strong>
-                        <span className="font-semibold">{advisers.phone}</span>
+                        <span className="font-semibold">{formatPhoneNumber(advisers.phone)}</span>
                       </div>
                     </div>
                   </div>

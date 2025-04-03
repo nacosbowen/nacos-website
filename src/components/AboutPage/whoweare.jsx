@@ -26,13 +26,13 @@ const Whoweare = () => {
 
   return (
     <div className="sm:px-[3rem] px-[1.5rem] py-8 lg:px-[4rem] lg:py-16 max-w-[1600px] mx-auto ">
-      <div className="grid grid-cols-3 items-center justify-around text-center bg-grey mb-10 z-50">
+      <div className="grid grid-cols-3 items-center justify-around text-center bg-grey mb-10 z-50 transition-all">
         {
           data.map((item, index) => {
             return <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`px-1 py-3 w-[1fr] font-bold h-full text-md text-darkblue ${activeTab === index ? "bg-darkorange text-white" : ""}`}
+              className={`px-1 py-3 w-[1fr] font-bold h-full text-md text-darkblue even:border-x border-darkorange ${activeTab === index ? "bg-darkorange text-white scale-110" : "hover:bg-[#eee] hover:font-bold"}`}
             >
               {item.label}
             </button>

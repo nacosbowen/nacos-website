@@ -33,3 +33,24 @@ export function calculateReadTime(content) {
 export function scrollToTop(){
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+export function formatPhoneNumber(input){
+  // Remove all non-numeric characters except '+'
+  const cleaned = input.replace(/[^\d+]/g, "");
+  
+  // Check if it's an international number
+  if (cleaned.startsWith("+")) {
+    return cleaned.replace(/(\+\d{3})(\d{3})(\d{3})(\d{4})/, "$1 $2 $3 $4");
+  }
+  
+  // Format based on length for local numbers
+  const digits = cleaned.replace(/\D/g, "");
+  if (digits.length <= 3) {
+    return digits;
+  } else if (digits.length <= 6) {
+    return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+  } else {
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 10)}`;
+  }
+};
+
