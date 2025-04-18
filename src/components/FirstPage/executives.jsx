@@ -62,7 +62,7 @@ const Executives = () => {
                 <img
                   src={executive?.url || avatar}
                   onError={(e) => (e.target.src = avatar)}
-                  className="w-full h-full object-cover transition-opacity duration-300 ease-in-out"
+                  className="w-full h-full object-cover object-top transition-opacity duration-300 ease-in-out"
                   alt={executive?.fullName || "Executive image not available"}
                 />
               </div>

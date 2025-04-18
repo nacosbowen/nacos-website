@@ -86,7 +86,7 @@ const ExecutivesDetails = () => {
                     <img
                       src={executive?.url || avatar}
                       onError={(e) => (e.target.src = avatar)}
-                      className="w-full h-full object-cover object-center executive-image"
+                      className="w-full h-full object-cover object-top executive-image"
                       alt={executive?.fullName}
                     />
                     <div
