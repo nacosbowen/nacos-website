@@ -127,7 +127,7 @@ code {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 5, 0.5); /* Dark overlay */
-  backdrop-filter: blur(2px); /* Apply blur */
+  backdrop-filter: blur(1px); /* Apply blur */
 }
 
 .executiveHero h1 {
