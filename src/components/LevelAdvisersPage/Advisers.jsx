@@ -41,10 +41,10 @@ const Staff = ({ data }) => {
                   <strong className="text-darkblue">Office: </strong>
                   <span className="font-semibold">{authorities.headOfProgram.office}</span>
                 </div>
-                <div>
+                {/* <div>
                   <strong className="text-darkblue">Phone: </strong>
                   <span className="font-semibold">{formatPhoneNumber(authorities.headOfProgram.phone)}</span>
-                </div>
+                </div> */}
                 <div>
                   <strong className="text-darkblue">Department: </strong>
                   <span className="font-semibold">{authorities.headOfProgram.department}</span>
@@ -83,10 +83,10 @@ const Staff = ({ data }) => {
                         <strong className="text-darkblue">Level: </strong>
                         <span className="font-semibold capitalize">{advisers.level}</span>
                       </div>
-                      <div>
+                      {/* <div>
                         <strong className="text-darkblue">Phone: </strong>
                         <span className="font-semibold">{formatPhoneNumber(advisers.phone)}</span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </motion.div>

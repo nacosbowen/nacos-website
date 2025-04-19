@@ -115,7 +115,7 @@ code {
 
 .executiveHero {
   position: relative;
-  background-image: url("/Executive-Table.jpg");
+  background-image: url("/Excos-Group-Image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -127,7 +127,7 @@ code {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 5, 0.5); /* Dark overlay */
-  backdrop-filter: blur(3px); /* Apply blur */
+  backdrop-filter: blur(2px); /* Apply blur */
 }
 
 .executiveHero h1 {
