@@ -24,17 +24,22 @@ const TheBlogs = () => {
       </div>
     );
   return (
-    <div className="bg-gradient-to-tl from-[#0c1a3e] via-[#2b3d6a] to-[#0c1a3e] shadow-lg py-8">
-      <h3 className="font-bold text-[1.2rem] text-center uppercase sm:text-[1.8rem] leading-normal text-white">Blogs</h3>
-      <div className="md:px-[3rem] px-[2rem] md:py-2 lg:px-[4rem] mt-[3rem] lg:mt-[4rem]  lg:py-4 mb-10">
+    <div className="home-blog-container py-8">
+      <h3 className="font-bold text-[1.2rem] text-center uppercase sm:text-[1.8rem] leading-normal text-black">
+        Blogs
+      </h3>
+      <div className="md:px-[3rem] px-[1rem] md:py-2 lg:px-[4rem] mt-[3rem] lg:mt-[4rem]  lg:py-4 mb-10">
         <div className="grid gap-[2rem] grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 md:gap-[1.5rem]">
           {blog.map((blogItem, i) => (
-            <FloatInAnimation delay={i * 0.2}
+            <FloatInAnimation
+              delay={i * 0.2}
               key={i}
               className="shadow-lg rounded-[10px] overflow-hidden bg-white"
             >
               <div
-                className={`h-[200px] bg-cover bg-center bg-grey ${!blogItem.imageUrl ? "animate-pulse" : ""}`}
+                className={`h-[200px] bg-cover bg-center bg-grey ${
+                  !blogItem.imageUrl ? "animate-pulse" : ""
+                }`}
                 style={{ backgroundImage: `url(${blogItem.imageUrl})` }}
               ></div>
 

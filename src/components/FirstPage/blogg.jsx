@@ -14,7 +14,7 @@ const formatDate = (dateString) => {
     day: "numeric",
   }).format(date);
 };
-const BLOG = ({ header, link, blogList, headerDivider = false }) => {
+const BLOG = ({ header, link, blogList, headerDivider = false, headerColor= "default" }) => {
   const { allBlogs, isLoading } = useNacos();
   const [visibleBlogs, setVisibleBlogs] = useState(3);
 
@@ -51,8 +51,10 @@ const BLOG = ({ header, link, blogList, headerDivider = false }) => {
   return (
     <div className="md:px-[3rem] py-6 px-6 lg:px-[2rem] box-border home-blog-container">
       <h1
-        className={`text-darkorange leading-[150%] text-center font-semibold md:mb-[3rem] mb-4 text-[2rem] ${
+        className={`leading-[150%] text-center font-semibold md:mb-[3rem] mb-4 text-[2rem] ${
           headerDivider ? "blog-list-header" : ""
+        } ${
+          headerColor === "default" ? "text-darkorange" : "text-dark"
         }`}
       >
         {header}
