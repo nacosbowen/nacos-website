@@ -22,7 +22,7 @@ const Footer = () => {
     items: [
       { name: "Blog", href: "/blogs" },
       { name: "Past Questions", href: "/past-questions" },
-      { name: "Newsletter", href: "/newsletter" },
+      { name: "Newsletters", href: "/newsletter" },
     ],
   };
   // { name: "Events", href: "/events" },

@@ -84,7 +84,7 @@ const Navbar = () => {
     { title: "Level Advisers", link: "/level-advisers" },
     { title: "Blogs", link: "/blogs" },
     { title: "Past Questions", link: "/past-questions" },
-    { title: "Newsletter", link: "/newsletter" },
+    { title: "Newsletters", link: "/newsletter" },
   ];
 
   return (
@@ -120,7 +120,7 @@ const Navbar = () => {
               items={[
                 { label: "Blogs", to: "/blogs" },
                 { label: "Past Questions", to: "/past-questions" },
-                { label: "Newsletter", to: "/newsletter" },
+                { label: "Newsletters", to: "/newsletter" },
               ]}
               isActive={activeDropdown === "more"}
               toggle={() => toggleDropdown("more")}

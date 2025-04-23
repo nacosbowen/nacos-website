@@ -7,7 +7,6 @@ import TheBlogs from "../components/BlogsPage/TheBlogs";
 import Partner from "../components/AboutPage/partners";
 import Footer from "../components/FirstPage/footer";
 import ScrollToTop from "../ui/ScrollToTop";
-import { ToastContainer } from "react-toastify";
 
 const Blogs = () => {
   useEffect(() => {
@@ -16,7 +15,6 @@ const Blogs = () => {
 
   return (
     <div className="min-w-[20rem]">
-      <ToastContainer position="top-center" hideProgressBar closeButton={false} toastStyle={{maxWidth: '85%', borderRadius: '10px', marginTop: '4.5rem'}} />
       <Navbar />
       <BlogHero />
       <ReadBlogs />
