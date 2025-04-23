@@ -23,7 +23,7 @@ const FilterExamQuestions = ({ Dept, setDept, levels, setLevel, semesters, setSe
   const Dropdown = ({ label, selected, options, setSelected, isOpen, toggle }) => (
     <div className="relative">
       <button
-        className="rounded-[1.08rem] bg-darkorange cursor-pointer flex gap-2 items-center w-fit py-1 sm:py-2 lg:py-4 px-2 sm:px-4 md:px-6 lg:px-[3.4rem]"
+        className="rounded-md bg-darkorange drop-shadow-xl inset-1 cursor-pointer flex gap-2 items-center w-fit py-1 sm:py-2 lg:py-4 px-2 sm:px-4 md:px-6 lg:px-[3.4rem]"
         onClick={toggle}
         aria-expanded={isOpen}
       >
@@ -52,7 +52,7 @@ const FilterExamQuestions = ({ Dept, setDept, levels, setLevel, semesters, setSe
 
   return (
     <div className="px-3 mt-8 md:py-2 lg:py-4">
-      <div className="flex my-4 sm:my-0 gap-2 lg:gap-4 items-center">
+      <div className="flex flex-wrap my-4 sm:my-0 gap-2 lg:gap-4 items-center">
         <Dropdown label="Department" selected={Dept} options={departmentOptions} setSelected={setDept} isOpen={dropdowns.department} toggle={() => toggleDropdown("department")} />
         <Dropdown label="Level" selected={levels} options={levelOptions} setSelected={setLevel} isOpen={dropdowns.level} toggle={() => toggleDropdown("level")} />
         <Dropdown label="Semester" selected={semesters} options={semesterOptions} setSelected={setSemester} isOpen={dropdowns.semester} toggle={() => toggleDropdown("semester")} />
