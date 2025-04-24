@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { scrollToTop } from "../utils/utils";
 import Navbar from "../components/FirstPage/navbar";
-import BlogHero from "../components/BlogsPage/BlogHero";
+import BlogHero from "../components/BlogsPage/blogHero";
 import ReadBlogs from "../components/BlogsPage/readBlogs";
 import TheBlogs from "../components/BlogsPage/TheBlogs";
 import Partner from "../components/AboutPage/partners";
