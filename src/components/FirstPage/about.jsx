@@ -19,7 +19,7 @@ const About = () => {
             <p className="text-dark md:text-[1.2rem] xl:text-center text-center text-base font-normal leading-[217%]  lg:hidden px-[.5rem] w-fit">
               The{" "}
               <strong>
-                Nigerian Association of Computing Students (BOWEN Chapter)
+                Nigeria Association of Computing Students (BOWEN Chapter)
               </strong>{" "}
               is a student body dedicated to fostering academic excellence among
               computing students in various departments, providing resources and
@@ -51,7 +51,7 @@ const About = () => {
                 <p className="leading-[250%]">
                   The{" "}
                   <strong>
-                    Nigerian Association of Computing Students (BOWEN Chapter)
+                    Nigeria Association of Computing Students (BOWEN Chapter)
                   </strong>{" "}
                   is a student body dedicated to fostering academic excellence
                   among computing students in various departments, providing
