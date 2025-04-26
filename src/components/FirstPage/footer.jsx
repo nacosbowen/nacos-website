@@ -88,7 +88,7 @@ const Footer = () => {
             </div>
 
             <p className="text-[.55rem] sm:text-[.75rem] uppercase text-[#ccc]  whitespace-nowrap">
-              Nigerian Association of Computing Students <br /> Bowen
+              Nigeria Association of Computing Students <br /> Bowen
               University, Iwo.
             </p>
           </Link>
