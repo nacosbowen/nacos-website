@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 
 const FloatInAnimation = ({ children, delay = 0, className,  }) => {

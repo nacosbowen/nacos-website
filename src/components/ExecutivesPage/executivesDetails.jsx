@@ -9,7 +9,6 @@ const executiveYear = 2024;
 
 const ExecutivesDetails = () => {
   const { excos, isLoading } = useNacos();
-
   // const textExcos = [
   //   {
   //     // url: Oshafi,
@@ -46,6 +45,8 @@ const ExecutivesDetails = () => {
     "Assistant Hardware Director",
     "Assistant Software Director",
   ];
+
+  // array.sort((a, b) => a - b)
 
   const sortedExcos = [...excos].sort((a, b) => {
     const indexA = positionOrder.indexOf(a.position);

@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { IoMdArrowRoundUp } from 'react-icons/io';
+import { useState, useEffect } from "react";
+import { IoMdArrowRoundUp } from "react-icons/io";
 
 function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   // Function to handle scroll event
   const handleScroll = () => {
-    if (window.scrollY > 300) { 
+    if (window.scrollY > 100) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -15,15 +15,24 @@ function ScrollToTop() {
 
   // Effect to add/remove scroll event listener
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div className={`bg-darkorange text-white fixed bottom-5 right-5 rounded-md text-xl transition-all ease-linear duration-300 z-50 ${isVisible ? 'translate-y-0 block' : 'translate-y-16'}`}>
-      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className='p-2' name='scrollToTop' title='scroll To Top'>
+    <div
+      className={`bg-darkorange text-white fixed bottom-5 right-5 rounded-md text-xl transition-all ease-linear duration-300 z-50 ${
+        isVisible ? "translate-y-0 block" : "translate-y-16"
+      }`}
+    >
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="p-2"
+        name="scrollToTop"
+        title="scroll To Top"
+      >
         <IoMdArrowRoundUp />
       </button>
     </div>

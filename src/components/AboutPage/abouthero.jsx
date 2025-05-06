@@ -1,8 +1,6 @@
-import React from "react";
-
 const Abouthero = () => {
   return (
-    <div >
+    <div>
       <div className="max-h-full ">
         <div className="h-[320px] md:h-[50vh] max-w-full Abouthero bg-cover bg-center">
           <div className="w-full h-full flex justify-center items-center">
