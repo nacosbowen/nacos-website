@@ -1,21 +1,6 @@
-const OtherEvents = () => {
-  const otherEvents = [
-    // {
-    //   picture: Event1,
-    //   name: "NEXT GENERATION OF TECHNOLGY.",
-    //   date: "15 May 2023",
-    // },
-    // {
-    //   picture: Event2,
-    //   name: "COLLEGE WEEK.",
-    //   date: "15th May - 21st May 2023",
-    // },
-    // {
-    //   picture: Event4,
-    //   name: "TECHATON.",
-    //   date: "8 December 2023",
-    // },
-  ];
+import PropTypes from "prop-types";
+
+const OtherEvents = ({ otherEvents }) => {
   return (
     <div className="max-h-full bg-[--darkColor]">
       <div className="m-10 flex flex-col items-center p-[5rem]">
@@ -32,14 +17,16 @@ const OtherEvents = () => {
               {otherEvents?.map((event, i) => (
                 <div key={i}>
                   <img
-                    src={event?.picture}
+                    src={event?.url}
                     className="w-96"
-                    alt={event?.name}
+                    alt={event?.eventName}
                   />
                   <h1 className="text-[--white] mt-4 font-bold">
-                    {event?.name}
+                    {event?.EventName}
                   </h1>
-                  <p className="text-[--white] mt-4 font-bold">{event?.date}</p>
+                  <p className="text-[--white] mt-4 font-bold">
+                    {event?.startDate}
+                  </p>
                 </div>
               ))}
             </div>
@@ -57,3 +44,7 @@ const OtherEvents = () => {
 };
 
 export default OtherEvents;
+
+OtherEvents.propTypes = {
+  otherEvents: PropTypes.array,
+};

@@ -54,15 +54,21 @@ function NacosContext({ children }) {
   useEffect(() => {
     fetchData("excos/", "excos/loaded", "Error fetching executives");
     fetchData("events/current", "events/loaded", "Error fetching events");
-    fetchData("past-questions", "pastQuestions/loaded", "Error fetching past questions");
-    fetchData("blog/weekly", "blogWeek/loaded", "Error fetching blog of the week");
+    fetchData(
+      "past-questions",
+      "pastQuestions/loaded",
+      "Error fetching past questions"
+    );
+    fetchData(
+      "blog/weekly",
+      "blogWeek/loaded",
+      "Error fetching blog of the week"
+    );
     fetchData("blog/", "allBlogs/loaded", "Error fetching blogs");
   }, []);
 
   return (
-    <nacosData.Provider value={{ ...state }}>
-      {children}
-    </nacosData.Provider>
+    <nacosData.Provider value={{ ...state }}>{children}</nacosData.Provider>
   );
 }
 
